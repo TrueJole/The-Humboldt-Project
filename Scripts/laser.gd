@@ -4,6 +4,8 @@ const LIMIT: int = 10
 const LIGHT_LIMIT: int = 5
 var laserCount: int
 
+@export var disabled: bool
+
 const LASERLIGHT: PackedScene = preload("res://Game Assets/Parts/laserlight.tscn")
 
 func laser(startpoint: Vector3, direction: Vector3) -> void:
@@ -36,7 +38,7 @@ func laser(startpoint: Vector3, direction: Vector3) -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	
-	laserCount = 0
-	laser(global_position, get_global_transform().basis.x)
+	if not disabled:
+		laserCount = 0
+		laser(global_position, get_global_transform().basis.x)
 	

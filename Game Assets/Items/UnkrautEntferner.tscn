@@ -131,6 +131,7 @@ area_mask = 8
 [node name="SprayArea" type="Area3D" parent="." index="6"]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.0296128, 0, 0.0293064)
 monitorable = false
+metadata/itemid = "poison"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="SprayArea" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.512505, 0.275482, 0.00579834)

@@ -37,7 +37,7 @@ func _process(_delta: float) -> void:
 		info.minfps = fpsArray.min()
 		info.physic_process_time = str(Performance.get_monitor(Performance.TIME_PHYSICS_PROCESS) * 1000) + 'ms'
 		#info.cpuMainRenderTime = RenderingServer.viewport_get_measured_render_time_cpu(get_viewport())
-		info.memory = str(OS.get_static_memory_usage() / 1000000) + 'MB'
+		info.memory = str(round(OS.get_static_memory_usage() / 1000000.0)) + 'MB'
 		info.drawCalls = Performance.get_monitor(Performance.RENDER_TOTAL_DRAW_CALLS_IN_FRAME)
 		info.objectsDrawn = Performance.get_monitor(Performance.RENDER_TOTAL_OBJECTS_IN_FRAME)
 		info.videoMemory = str(round(Performance.get_monitor(Performance.RENDER_VIDEO_MEM_USED) / 1000000)) + 'MB'

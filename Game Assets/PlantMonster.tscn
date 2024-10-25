@@ -1,60 +1,99 @@
-[gd_scene load_steps=3 format=3 uid="uid://0bnbh7lwk0t0"]
+[gd_scene load_steps=10 format=3 uid="uid://0bnbh7lwk0t0"]
 
-[ext_resource type="PackedScene" uid="uid://dy50enm8h6j0i" path="res://Assets/PlantMonster.glb" id="1_1e2bl"]
-[ext_resource type="Material" uid="uid://dobgsic4cnrcx" path="res://Assets/Materials/Grass.tres" id="2_n18k1"]
+[ext_resource type="PackedScene" uid="uid://b67jkkcgyssba" path="res://Assets/PlantMonsterApplied.glb" id="1_d0xis"]
+[ext_resource type="Script" path="res://Game Assets/plant_monster.gd" id="2_jmgsd"]
+[ext_resource type="Material" uid="uid://bpvalkp5hinws" path="res://Assets/Materials/PlantMonsterMaterial.tres" id="2_pwf3e"]
+[ext_resource type="PackedScene" uid="uid://burmik51o82fn" path="res://Szenen/ActivationModule.tscn" id="3_71cvx"]
 
-[node name="PlantMonster" instance=ExtResource("1_1e2bl")]
+[sub_resource type="BoxShape3D" id="BoxShape3D_dgvrh"]
+size = Vector3(1.95908, 1.95158, 0.347137)
 
-[node name="Cone_001" parent="Collection 2" index="1"]
-material_override = ExtResource("2_n18k1")
+[sub_resource type="Animation" id="Animation_khpmn"]
+resource_name = "killed"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Plane_011:transparency")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape3D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(2),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
-[node name="Cone_004" parent="Collection 2_001" index="1"]
-material_override = ExtResource("2_n18k1")
+[sub_resource type="Animation" id="Animation_1006s"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Plane_011:transparency")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape3D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
-[node name="Cone_002" parent="Collection 2_002" index="1"]
-material_override = ExtResource("2_n18k1")
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vkqxj"]
+_data = {
+"RESET": SubResource("Animation_1006s"),
+"killed": SubResource("Animation_khpmn")
+}
 
-[node name="Cone_005" parent="Collection 2_003" index="1"]
-material_override = ExtResource("2_n18k1")
+[sub_resource type="BoxShape3D" id="BoxShape3D_sg8v1"]
+size = Vector3(1.97937, 2.15668, 0.702515)
 
-[node name="Cone_006" parent="Collection 2_004" index="1"]
-material_override = ExtResource("2_n18k1")
+[node name="PlantMonsterApplied" instance=ExtResource("1_d0xis")]
+script = ExtResource("2_jmgsd")
 
-[node name="Cone" parent="PlantC_001" index="1"]
-material_override = ExtResource("2_n18k1")
+[node name="Plane_011" parent="." index="0"]
+material_override = ExtResource("2_pwf3e")
 
-[node name="Cone_007" parent="PlantC_002" index="1"]
-material_override = ExtResource("2_n18k1")
+[node name="Activation Module" parent="." index="1" instance=ExtResource("3_71cvx")]
+activators = Array[String](["poison"])
 
-[node name="Cone_003" parent="PlantD" index="0"]
-material_override = ExtResource("2_n18k1")
+[node name="CollisionShape3D" parent="Activation Module" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.856836, -0.842215, 0.156553)
+shape = SubResource("BoxShape3D_dgvrh")
 
-[node name="Cone_008" parent="PlantD_001" index="0"]
-material_override = ExtResource("2_n18k1")
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="2"]
+libraries = {
+"": SubResource("AnimationLibrary_vkqxj")
+}
 
-[node name="Cone_0012" parent="PlantB" index="1"]
-material_override = ExtResource("2_n18k1")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00665283, 0.0856018, 0.389832)
+shape = SubResource("BoxShape3D_sg8v1")
 
-[node name="Cone_0022" parent="PlantA" index="1"]
-material_override = ExtResource("2_n18k1")
+[connection signal="activated" from="Activation Module" to="." method="_on_activation_module_activated"]
 
-[node name="Plane_002" parent="Leaf_001" index="0"]
-material_override = ExtResource("2_n18k1")
-
-[node name="Plane_003" parent="Leaf_002" index="0"]
-material_override = ExtResource("2_n18k1")
-
-[node name="Plane_004" parent="Leaf_003" index="0"]
-material_override = ExtResource("2_n18k1")
-
-[node name="Plane_005" parent="Leaf_004" index="0"]
-material_override = ExtResource("2_n18k1")
-
-[node name="Plane_006" parent="Leaf_005" index="0"]
-material_override = ExtResource("2_n18k1")
-
-[node name="Plane" parent="." index="16"]
-material_override = ExtResource("2_n18k1")
-
-[node name="Plane_001" parent="." index="17"]
-material_override = ExtResource("2_n18k1")
+[editable path="Activation Module"]

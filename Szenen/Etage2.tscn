@@ -22,7 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://bxi2me5stma5t" path="res://Game Assets/Deco/NormalerTisch.tscn" id="18_2m7jc"]
 [ext_resource type="PackedScene" uid="uid://gjyr1kpvo1u7" path="res://Game Assets/Items/Schlüssel.tscn" id="18_2pkfl"]
 [ext_resource type="PackedScene" uid="uid://c8yc1kp3ps17j" path="res://Game Assets/Deco/TempEnde.tscn" id="18_r4o85"]
-[ext_resource type="Script" path="res://Szenen/Etage2Rätsel.gd" id="18_xuvl7"]
+[ext_resource type="Script" path="res://Scripts/Etage2Rätsel.gd" id="18_xuvl7"]
 [ext_resource type="Material" uid="uid://bk3fedv3l0f2d" path="res://Assets/Materials/WandBeige.tres" id="19_0isbn"]
 [ext_resource type="PackedScene" uid="uid://xobymtoepjql" path="res://Game Assets/Deco/Stuhl.tscn" id="19_ghe1m"]
 [ext_resource type="PackedScene" uid="uid://dy0oak3a8liuu" path="res://Game Assets/Walls n Stuff/VersperrteTür.tscn" id="20_gk5tm"]
@@ -139,6 +139,18 @@ tracks/0/path = NodePath("Node3D")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node3D/StaticBody3D2/CollisionShape3D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_o87s7"]
 resource_name = "secretEntrance"
@@ -165,6 +177,18 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0)
 }
 tracks/1/use_blend = true
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node3D/StaticBody3D2/CollisionShape3D:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qf7t5"]
 _data = {
@@ -4445,28 +4469,24 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0125599, 0, -0.592525)
 bus = &"Räume"
 area_mask = 8
 
-[node name="StaticBody3D2" type="AnimatableBody3D" parent="Node3D"]
+[node name="Wand 1 * 4" type="MeshInstance3D" parent="Node3D"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, -1)
+material_override = ExtResource("19_0isbn")
+lod_bias = 128.0
+mesh = SubResource("ArrayMesh_fj7sg")
+skeleton = NodePath("")
+
+[node name="Wand 1 * 5" type="MeshInstance3D" parent="Node3D"]
+transform = Transform3D(3.13916e-07, 0, 1, 0, 1, 0, -1, 0, 3.13916e-07, 0, 0, 0)
+material_override = ExtResource("19_0isbn")
+lod_bias = 128.0
+mesh = SubResource("ArrayMesh_fj7sg")
+skeleton = NodePath("")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="Node3D"]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, -1)
 
-[node name="Wand 1 * 4" type="MeshInstance3D" parent="Node3D/StaticBody3D2"]
-material_override = ExtResource("19_0isbn")
-lod_bias = 128.0
-mesh = SubResource("ArrayMesh_fj7sg")
-skeleton = NodePath("")
-
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/StaticBody3D2"]
-shape = SubResource("ConvexPolygonShape3D_gsusc")
-
-[node name="StaticBody3D" type="AnimatableBody3D" parent="Node3D"]
-transform = Transform3D(3.13916e-07, 0, 1, 0, 1, 0, -1, 0, 3.13916e-07, 0, 0, 0)
-
-[node name="Wand 1 * 4" type="MeshInstance3D" parent="Node3D/StaticBody3D"]
-material_override = ExtResource("19_0isbn")
-lod_bias = 128.0
-mesh = SubResource("ArrayMesh_fj7sg")
-skeleton = NodePath("")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_gsusc")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." node_paths=PackedStringArray("m1", "m2", "m3", "m4")]

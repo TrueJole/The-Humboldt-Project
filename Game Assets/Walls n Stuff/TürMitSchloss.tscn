@@ -27,8 +27,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.877395, 0.846614, -0.075180
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.00290447, 0.0192053, -0.0287047)
 
 [connection signal="activated" from="Activation Module" to="." method="_on_activation_module_activated"]
-[connection signal="activated" from="Activation Module2" to="." method="_on_activation_module_activated"]
 [connection signal="activated" from="Activation Module2" to="." method="_on_activation_module_2_activated2"]
+[connection signal="activated" from="Activation Module2" to="." method="_on_activation_module_activated"]
 
 [editable path="Activation Module"]
 [editable path="Activation Module2"]

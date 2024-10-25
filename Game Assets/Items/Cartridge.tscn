@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bbtev5l7d38pg"]
+[gd_scene load_steps=6 format=3 uid="uid://bbtev5l7d38pg"]
 
 [ext_resource type="PackedScene" uid="uid://d0lv2dbd7attd" path="res://Assets/Cartridge.glb" id="1_evsl2"]
 [ext_resource type="Texture2D" uid="uid://le45t6vap2xc" path="res://Assets/Materials/Textures/icon.svg" id="2_si6vs"]
+[ext_resource type="Material" uid="uid://bvbuv05k6fwtc" path="res://Assets/Materials/UhrenSchwarz.tres" id="3_q5skw"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4xb1e"]
 albedo_texture = ExtResource("2_si6vs")
@@ -18,6 +19,7 @@ metadata/data = ExtResource("2_si6vs")
 
 [node name="Cube" parent="." index="0"]
 transform = Transform3D(0.0872664, 0, 0, 0, -3.81453e-09, -0.0872664, 0, 0.0872664, -3.81453e-09, 0, 0, -0.0120179)
+surface_material_override/0 = ExtResource("3_q5skw")
 surface_material_override/1 = SubResource("StandardMaterial3D_4xb1e")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1"]

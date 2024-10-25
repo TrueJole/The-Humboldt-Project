@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://ck870md3a4o7k"]
 
 [ext_resource type="PackedScene" uid="uid://dncplm7dwadww" path="res://Assets/Globe.glb" id="1_q4afu"]
-[ext_resource type="Script" path="res://Game Assets/Deco/Globe.gd" id="2_8g44g"]
+[ext_resource type="Script" path="res://Scripts/Globe.gd" id="2_8g44g"]
 [ext_resource type="Material" uid="uid://c8n1i4okw40dn" path="res://Assets/Materials/Bronze.tres" id="2_qg5yd"]
 [ext_resource type="PackedScene" uid="uid://b78p4v3k6a2ov" path="res://Szenen/Interactive Component.tscn" id="4_1c58r"]
 [ext_resource type="Texture2D" uid="uid://0d8jhv5iso84" path="res://Assets/Materials/Textures/GlobeCC0.jpg" id="4_6woxw"]

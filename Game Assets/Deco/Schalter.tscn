@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://cr8psxcgciod8"]
+[gd_scene load_steps=11 format=3 uid="uid://cr8psxcgciod8"]
 
 [ext_resource type="PackedScene" uid="uid://d2dxx8gm1jmrm" path="res://Assets/Schalter.glb" id="1_dhk6t"]
 [ext_resource type="Script" path="res://Scripts/Schalter.gd" id="2_bbxv8"]
 [ext_resource type="PackedScene" uid="uid://b78p4v3k6a2ov" path="res://Szenen/Interactive Component.tscn" id="3_qmw2e"]
+[ext_resource type="Material" uid="uid://cgd6dxilf770d" path="res://Assets/Materials/GreenLightOn.tres" id="4_go7ja"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ag2w6"]
 metallic = 0.64
@@ -15,11 +16,8 @@ emission = Color(0.145098, 0.835294, 0, 1)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1dmpb"]
 albedo_color = Color(0.501961, 0.501961, 0.501961, 1)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ntq4i"]
-albedo_color = Color(0, 0.929412, 0.368627, 1)
-roughness = 0.15
-emission_enabled = true
-emission = Color(0.145098, 0.835294, 0, 1)
+[sub_resource type="BoxShape3D" id="BoxShape3D_ghemo"]
+size = Vector3(0.16048, 0.243778, 0.0689431)
 
 [sub_resource type="Animation" id="Animation_xxonp"]
 resource_name = "down"
@@ -46,7 +44,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.4),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [SubResource("StandardMaterial3D_y3bkx"), SubResource("StandardMaterial3D_ntq4i")]
+"values": [SubResource("StandardMaterial3D_y3bkx"), ExtResource("4_go7ja")]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_cwetc"]
@@ -75,6 +73,10 @@ surface_material_override/0 = SubResource("StandardMaterial3D_1dmpb")
 
 [node name="Interactive Component" parent="Cylinder" index="0" instance=ExtResource("3_qmw2e")]
 
+[node name="CollisionShape3D" parent="Cylinder/Interactive Component" index="0"]
+transform = Transform3D(0.999998, 0.000916663, -0.00173584, 0.000916762, 0.563845, 0.825879, 0.00173579, -0.82588, 0.563843, 0.192133, 0.334867, -0.134156)
+shape = SubResource("BoxShape3D_ghemo")
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="2"]
 libraries = {
 "": SubResource("AnimationLibrary_cwetc")
@@ -82,4 +84,7 @@ libraries = {
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." index="3"]
 
+[connection signal="pressed" from="Cylinder/Interactive Component" to="." method="_on_interactive_component_pressed"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+
+[editable path="Cylinder/Interactive Component"]
