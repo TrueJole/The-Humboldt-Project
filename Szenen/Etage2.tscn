@@ -219,7 +219,6 @@ uv1_offset = Vector3(0, 0.085, 0)
 
 [node name="Dach" parent="." instance=ExtResource("1_m6fo4")]
 transform = Transform3D(1, 0, 0, 0, 0.24097, 0, 0, 0, 1, 0, 2.649, 0)
-visible = false
 
 [node name="FloorTile3" parent="." instance=ExtResource("2_a3swf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
@@ -5324,6 +5323,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.3956, 0.000500202, 2.56066
 
 [node name="RollStuhl17" parent="." instance=ExtResource("15_ioigq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.3956, 0.000500202, 3.14465)
+visible = false
 
 [node name="RollStuhl18" parent="." instance=ExtResource("15_ioigq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.3956, 0.000500202, 3.89314)
@@ -5377,7 +5377,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.7628, 0.895421, -4.04975)
 transform = Transform3D(-0.00729541, -7.77559e-17, 0.999973, -1.06581e-14, 1, 0, -0.999973, -1.06579e-14, -0.00729541, -1.71344, 0.625265, -8.25006)
 
 [node name="RoundLamp" parent="." instance=ExtResource("44_l736y")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.64876, -0.145034, -8.22294)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.64876, -0.165255, -8.22294)
 
 [node name="Bilderrahmen" parent="." instance=ExtResource("45_2vtt4")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3.9, 1.53626, -6.6487)

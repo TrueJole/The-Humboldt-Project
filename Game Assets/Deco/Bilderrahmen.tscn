@@ -17,7 +17,7 @@ roughness = 0.81
 
 [node name="Cube" parent="." index="0"]
 transform = Transform3D(-1.21577e-08, 0.278135, 0, -0.278135, -1.21577e-08, 0, 0, 0, 0.278135, 0, 0, 0)
-lod_bias = 0.001
+lod_bias = 128.0
 visibility_range_end = 50.0
 surface_material_override/0 = SubResource("StandardMaterial3D_alfbh")
 surface_material_override/1 = SubResource("StandardMaterial3D_qkbu7")

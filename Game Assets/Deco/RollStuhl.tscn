@@ -13,7 +13,6 @@ size = Vector3(0.329117, 0.0275879, 0.312988)
 [node name="RollStuhl" instance=ExtResource("1_p0rek")]
 
 [node name="Cube" parent="." index="0"]
-lod_bias = 0.3
 visibility_range_end = 40.0
 surface_material_override/0 = ExtResource("2_6kf1h")
 surface_material_override/1 = ExtResource("3_h0npb")

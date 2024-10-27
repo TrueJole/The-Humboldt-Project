@@ -21,7 +21,7 @@ size = Vector3(2.01184, 0.965439, 3.04736)
 [node name="Treppe" instance=ExtResource("1_g0vao")]
 
 [node name="Treppe_005" parent="." index="0"]
-lod_bias = 128.0
+lod_bias = 0.001
 surface_material_override/0 = ExtResource("2_xplfu")
 surface_material_override/1 = SubResource("StandardMaterial3D_ogjgk")
 surface_material_override/2 = ExtResource("2_xplfu")

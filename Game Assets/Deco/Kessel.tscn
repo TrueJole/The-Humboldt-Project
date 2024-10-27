@@ -63,6 +63,7 @@ _data = {
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_8vig4"]
 lifetime_randomness = 0.7
+particle_flag_rotate_y = true
 emission_shape_scale = Vector3(0.3, 0.1, 0.3)
 emission_shape = 3
 emission_box_extents = Vector3(1, 1, 1)
@@ -138,7 +139,7 @@ libraries = {
 [node name="BubbleParticles" type="GPUParticles3D" parent="." index="9"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5362, 0)
 emitting = false
-amount = 40
+amount = 60
 lifetime = 1.5
 one_shot = true
 explosiveness = 0.5

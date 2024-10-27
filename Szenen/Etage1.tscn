@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=4 uid="uid://cfqy3n888iblk"]
+[gd_scene load_steps=49 format=4 uid="uid://cfqy3n888iblk"]
 
 [ext_resource type="PackedScene" uid="uid://bm7y83q57jaqj" path="res://Game Assets/Walls n Stuff/FloorTile.tscn" id="1_8e773"]
 [ext_resource type="Script" path="res://Tools/ShowOnStart.gd" id="1_pc36m"]
@@ -35,6 +35,7 @@
 [ext_resource type="PackedScene" uid="uid://0b5hw70fw4wo" path="res://Game Assets/Items/Seife.tscn" id="33_c0mmc"]
 [ext_resource type="PackedScene" uid="uid://dbhplk556y4jk" path="res://Game Assets/Deco/Dyson.tscn" id="34_2mjnu"]
 [ext_resource type="PackedScene" uid="uid://ck870md3a4o7k" path="res://Game Assets/Deco/Globe.tscn" id="35_dh37o"]
+[ext_resource type="PackedScene" uid="uid://cfh5e4cxs28o4" path="res://Game Assets/Walls n Stuff/BathroomStall.tscn" id="36_vmgge"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_perbj"]
 
@@ -4326,7 +4327,7 @@ transform = Transform3D(1.33118e-07, 0, -1, 0, 1, 0, 1, 0, 1.33118e-07, -28, 0, 
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -21.4671, 0, 3.04687)
 
 [node name="Toilette5" parent="." instance=ExtResource("11_f4jd6")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -21.4138, 0, 4.52944)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -21.2075, 0, 4.52944)
 
 [node name="Toilette2" parent="." instance=ExtResource("11_f4jd6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.5257, 0, 3.59581)
@@ -5184,6 +5185,24 @@ transform = Transform3D(0.0267702, 0, -0.999642, 0, 1, 0, 0.999642, 0, 0.0267702
 
 [node name="Globe2" parent="." instance=ExtResource("35_dh37o")]
 transform = Transform3D(0.620546, 0, 0.78417, 0, 1, 0, -0.78417, 0, 0.620546, -27.2424, 0.607178, -8.69802)
+
+[node name="BathroomStall" parent="." instance=ExtResource("36_vmgge")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -25.9026, 0.000499725, 3.7396)
+
+[node name="BathroomStall2" parent="." instance=ExtResource("36_vmgge")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -25.9026, 0.000499725, 2.89394)
+
+[node name="BathroomStall5" parent="." instance=ExtResource("36_vmgge")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -20.9026, 0.000499725, 3.7396)
+
+[node name="BathroomStall6" parent="." instance=ExtResource("36_vmgge")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -20.9026, 0.000499725, 2.89394)
+
+[node name="BathroomStall3" parent="." instance=ExtResource("36_vmgge")]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -21.0981, 0.000499725, 2.89394)
+
+[node name="BathroomStall4" parent="." instance=ExtResource("36_vmgge")]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -21.0981, 0.000499725, 3.7396)
 
 [editable path="TürMitSchloss"]
 [editable path="TürMitSchloss/Activation Module"]
