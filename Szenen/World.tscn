@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://did6uqnw114lc"]
+[gd_scene load_steps=13 format=3 uid="uid://did6uqnw114lc"]
 
 [ext_resource type="Script" path="res://Scripts/applySettings.gd" id="1_c6mct"]
 [ext_resource type="Script" path="res://Tools/ShowOnStart.gd" id="2_ahk6u"]
@@ -7,6 +7,7 @@
 [ext_resource type="VoxelGIData" uid="uid://biuhfmotqdp8t" path="res://Resources/worldVoxelGI.res" id="4_s06mn"]
 [ext_resource type="Environment" uid="uid://b2qrgn2jq4hxf" path="res://Resources/WorldEnviroment.tres" id="5_p615n"]
 [ext_resource type="PackedScene" uid="uid://dy4ptaa6dtvyu" path="res://Szenen/Player.tscn" id="6_86xrg"]
+[ext_resource type="Script" path="res://Tools/BakeAll.gd" id="7_7mkm2"]
 [ext_resource type="PackedScene" uid="uid://dquwqhphaufcb" path="res://Szenen/EtageKeller.tscn" id="9_oo8js"]
 [ext_resource type="PackedScene" uid="uid://dl4e1l3f1unj3" path="res://Szenen/Etage2.tscn" id="10_1osk6"]
 [ext_resource type="PackedScene" uid="uid://cfqy3n888iblk" path="res://Szenen/Etage1.tscn" id="10_jqhs4"]
@@ -66,15 +67,10 @@ layers = 1023
 subdiv = 0
 size = Vector3(53.7896, 14.1598, 21.7017)
 data = ExtResource("4_s06mn")
-
-[node name="OccluderInstance3D" type="OccluderInstance3D" parent="."]
-process_mode = 3
-visible = false
-bake_mask = 4294967289
-bake_simplification_distance = 0.0
+script = ExtResource("7_7mkm2")
 
 [node name="Player" parent="." instance=ExtResource("6_86xrg")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.886827, 5.44741, 7.50324)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.886827, 2.32115, 9.91355)
 
 [node name="keller" parent="." instance=ExtResource("9_oo8js")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 4)

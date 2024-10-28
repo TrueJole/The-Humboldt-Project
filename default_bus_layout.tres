@@ -3,7 +3,7 @@
 [sub_resource type="AudioEffectReverb" id="AudioEffectReverb_gxp74"]
 resource_name = "Reverb"
 room_size = 0.44
-damping = 0.56
+damping = 0.67
 
 [sub_resource type="AudioEffectReverb" id="AudioEffectReverb_ihx36"]
 resource_name = "Reverb"

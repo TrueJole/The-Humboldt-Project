@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=3 uid="uid://cdjub5aihdnul"]
+[gd_scene load_steps=49 format=3 uid="uid://cdjub5aihdnul"]
 
 [ext_resource type="PackedScene" uid="uid://btre2blkv33rc" path="res://Szenen/Dach.tscn" id="1_87fcy"]
 [ext_resource type="PackedScene" uid="uid://bm7y83q57jaqj" path="res://Game Assets/Walls n Stuff/FloorTile.tscn" id="2_c4gfw"]
@@ -43,11 +43,16 @@
 [ext_resource type="PackedScene" uid="uid://cor2hd4ex3ebi" path="res://Game Assets/Deco/Candle.tscn" id="41_2bmp2"]
 [ext_resource type="PackedScene" uid="uid://qaq83xxd001n" path="res://Game Assets/Deco/Vent.tscn" id="42_1uger"]
 [ext_resource type="PackedScene" uid="uid://bhl6g0y3hal28" path="res://Game Assets/Deco/Plant.tscn" id="43_hjiu3"]
+[ext_resource type="PackedScene" uid="uid://cfh5e4cxs28o4" path="res://Game Assets/Walls n Stuff/BathroomStall.tscn" id="44_0cqt2"]
+[ext_resource type="PackedScene" uid="uid://cddt8mq7bfi8w" path="res://Szenen/audio_area_3d.tscn" id="45_ix4vl"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_perbj"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hyr51"]
 size = Vector3(8.08826, 1, 6.07672)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_14evp"]
+size = Vector3(38.5614, 3.45605, 3.09821)
 
 [node name="Etage3" type="Node3D"]
 
@@ -2603,9 +2608,6 @@ transform = Transform3D(3.0598e-07, 0, 1, 0, 1, 0, -1, 0, 3.0598e-07, -25, 0, 3)
 [node name="WandInnenOhneLeiste44" parent="." instance=ExtResource("5_kurm0")]
 transform = Transform3D(3.0598e-07, 0, 1, 0, 1, 0, -1, 0, 3.0598e-07, -25, 0, 0)
 
-[node name="WandInnenOhneLeiste249" parent="." instance=ExtResource("4_u6h2q")]
-transform = Transform3D(1, 0, -3.49691e-07, 0, 1, 0, 3.49691e-07, 0, 1, -24, 0, -1)
-
 [node name="WandInnenOhneLeiste250" parent="." instance=ExtResource("4_u6h2q")]
 transform = Transform3D(-1, 0, 2.62268e-07, 0, 1, 0, -2.62268e-07, 0, -1, -23, 0, -1)
 
@@ -2716,6 +2718,9 @@ transform = Transform3D(-1, 0, 8.74226e-08, 0, 1, 0, -8.74226e-08, 0, -1, -22, 0
 
 [node name="WandInnenOhneLeiste133" parent="." instance=ExtResource("5_kurm0")]
 transform = Transform3D(1, 0, -1.74845e-07, 0, 1, 0, 1.74845e-07, 0, 1, -23, 0, -1)
+
+[node name="WandInnenOhneLeiste155" parent="." instance=ExtResource("5_kurm0")]
+transform = Transform3D(1, 0, -1.74845e-07, 0, 1, 0, 1.74845e-07, 0, 1, -24, 0, -1)
 
 [node name="WandInnenOhneLeiste29" parent="." instance=ExtResource("5_kurm0")]
 transform = Transform3D(1, 0, -1.74845e-07, 0, 1, 0, 1.74845e-07, 0, 1, -4, 0, -1)
@@ -3946,10 +3951,10 @@ leftRotation = 0.115
 rightRotation = 0.962
 
 [node name="Toilette" parent="." instance=ExtResource("13_kbtk2")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -22.4671, 0, 2.04687)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -22.4671, 0, 2.1293)
 
 [node name="Toilette7" parent="." instance=ExtResource("13_kbtk2")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -22.4671, 0, 1.21726)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -22.4671, 0, 1.23007)
 
 [node name="Toilette8" parent="." instance=ExtResource("13_kbtk2")]
 transform = Transform3D(-1, 0, -2.62269e-07, 0, 1, 0, 2.62269e-07, 0, -1, -19.5274, 0, -0.31017)
@@ -3999,14 +4004,14 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -22.88
 [node name="Waschbecken3" parent="." instance=ExtResource("12_t7nte")]
 transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -20.597, 0, 0.907598)
 
-[node name="NormalerTisch19" type="StaticBody3D" parent="." instance=ExtResource("19_8m5wi")]
+[node name="NormalerTisch19" parent="." instance=ExtResource("19_8m5wi")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -14.9868, 0, 0.291128)
 
-[node name="NormalerTisch20" type="StaticBody3D" parent="." instance=ExtResource("19_8m5wi")]
+[node name="NormalerTisch20" parent="." instance=ExtResource("19_8m5wi")]
 transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -15.0203, 0, 1.03414)
 
 [node name="KreideTafel" parent="." instance=ExtResource("12_121wx")]
-transform = Transform3D(0, 0, -0.896048, 0, 0.896048, 0, 0.896048, 0, 0, -10.1178, -0.0097909, 0.794068)
+transform = Transform3D(0, 0, -0.896048, 0, 0.896048, 0, 0.896048, 0, 0, -10.1178, -0.036866, 0.794068)
 leftRotation = 0.09
 rightRotation = 0.03
 
@@ -4993,5 +4998,28 @@ transform = Transform3D(1.44248e-07, 0, -1.1, 0, 1.1, 0, 1.1, 0, 1.44248e-07, -1
 [node name="Stuhl121" parent="." instance=ExtResource("14_jt51d")]
 transform = Transform3D(1.44248e-07, 0, -1.1, 0, 1.1, 0, 1.1, 0, 1.44248e-07, -17.0126, 0.000500083, -4.61307)
 
+[node name="BathroomStall" parent="." instance=ExtResource("44_0cqt2")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -22.1004, 0, 1.95338)
+
+[node name="BathroomStall2" parent="." instance=ExtResource("44_0cqt2")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -19.1004, 0, 1.95338)
+
+[node name="Mülleimer3" parent="." instance=ExtResource("36_l2hsg")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2.60364, 0.000499725, -3.88412)
+
+[node name="Mülleimer4" parent="." instance=ExtResource("36_l2hsg")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -16.3964, 0.000499725, -3.88412)
+
+[node name="AudioArea3D" parent="." instance=ExtResource("45_ix4vl")]
+collision_layer = 8
+
+[node name="CollisionShape3D" parent="AudioArea3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.25329, 1.69937, -2.51584)
+shape = SubResource("BoxShape3D_14evp")
+
+[node name="CollisionShape3D2" parent="AudioArea3D" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.4965, 1.70786, -4.05272)
+
 [editable path="Dach"]
 [editable path="Pin Board"]
+[editable path="AudioArea3D"]
