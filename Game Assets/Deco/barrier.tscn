@@ -1,12 +1,19 @@
-[gd_scene load_steps=10 format=3 uid="uid://0x0n2tbj7juo"]
+[gd_scene load_steps=12 format=3 uid="uid://0x0n2tbj7juo"]
 
 [ext_resource type="Script" path="res://Scripts/barrier.gd" id="1_nrbmp"]
 [ext_resource type="PackedScene" uid="uid://2oq2o7t5vir3" path="res://Game Assets/Deco/Buzzer.tscn" id="2_gew4d"]
+[ext_resource type="Texture2D" uid="uid://djjla8np712l4" path="res://Assets/Materials/Textures/stripes.png" id="2_t0f28"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_5kvqk"]
+lightmap_size_hint = Vector2i(17, 40)
+size = Vector3(2.005, 2.2, 0.531)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m3qgb"]
+albedo_texture = ExtResource("2_t0f28")
+uv1_scale = Vector3(3.05, 3.05, 3.05)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_plck5"]
-size = Vector3(2.48845, 3.12141, 0.496094)
+size = Vector3(2.05742, 3.12141, 0.496094)
 
 [sub_resource type="Curve" id="Curve_cg55i"]
 _data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.532369, 1), 0.0, 0.0, 0, 0, Vector2(0.840909, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
@@ -42,13 +49,12 @@ script = ExtResource("1_nrbmp")
 [node name="Marker3D" type="Marker3D" parent="."]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Marker3D"]
-transform = Transform3D(2.16475, 0, 0, 0, 2.39968, 0, 0, 0, 0.531146, 0, 0, 0)
 layers = 2
 mesh = SubResource("BoxMesh_5kvqk")
-skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_m3qgb")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0157394, 0.653049, -0.000976562)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0253772, 0.653049, -0.000976562)
 shape = SubResource("BoxShape3D_plck5")
 
 [node name="GPUParticles3D" type="GPUParticles3D" parent="."]

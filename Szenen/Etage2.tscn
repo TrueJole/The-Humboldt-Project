@@ -227,7 +227,6 @@ size = Vector3(46.9966, 3.45605, 3.09821)
 
 [node name="Dach" parent="." instance=ExtResource("1_m6fo4")]
 transform = Transform3D(1, 0, 0, 0, 0.24097, 0, 0, 0, 1, 0, 2.649, 0)
-visible = false
 
 [node name="FloorTile3" parent="." instance=ExtResource("2_a3swf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)

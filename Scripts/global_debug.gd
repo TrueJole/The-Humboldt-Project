@@ -32,6 +32,7 @@ func calcMinFPS() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	if Root.Settings.showFPS:
+		label.show()
 		info.fps = Engine.get_frames_per_second()
 		fpsArray.append(round(1.0 / Performance.get_monitor(Performance.TIME_PROCESS)))
 		info.minfps = fpsArray.min()
@@ -48,3 +49,5 @@ func _process(_delta: float) -> void:
 		temp = temp.replace('"', '')
 		temp = temp.replace(',', '\n')
 		label.text = temp
+	else:
+		label.hide()

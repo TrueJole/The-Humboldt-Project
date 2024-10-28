@@ -8,8 +8,8 @@ var input: String
 var coins: int
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	item_list.hide()
-
+	#item_list.hide()
+	$Control.hide()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
@@ -19,10 +19,11 @@ func _process(_delta: float) -> void:
 func _on_interactive_component_pressed() -> void:
 	if coins > 0:
 		get_tree().paused = true
-		item_list.show()
+		#item_list.show()
+		$Control.show()
 		
 		
-		#item_list.grab_focus()
+		item_list.grab_focus()
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		if not get_tree().paused:
 			input = ""
@@ -54,7 +55,8 @@ func _on_item_list_item_clicked(index: int, _at_position: Vector2, _mouse_button
 		add_sibling(temp)
 		temp.global_position = marker_3d.global_position
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-		item_list.hide()
+		#item_list.hide()
+		$Control.hide()
 		#set_process(true)
 		get_tree().paused = false
 		await get_tree().create_timer(1).timeout  

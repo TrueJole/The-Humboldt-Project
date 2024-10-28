@@ -9,8 +9,9 @@ var lastBody: Node3D
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(_delta: float) -> void:
-	#print_debug(activated.is_connected(get_parent().activated()))
+	#print('TestTT')
 	if has_overlapping_bodies():
+		#print('test')
 		for body: Node3D in get_overlapping_bodies():
 			
 			if body.has_meta('itemid'):

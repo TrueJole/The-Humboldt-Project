@@ -114,7 +114,6 @@ size = Vector3(46.9966, 3.45605, 3.09821)
 
 [node name="Dach" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.24097, 0, 0, 0, 1, 0, 2.64908, 0)
-visible = false
 script = ExtResource("1_pc36m")
 ShowOnStart = true
 
@@ -3275,8 +3274,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 0, 5)
 [node name="WandInnenOhneLeiste212" parent="." instance=ExtResource("4_mor3f")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, 5)
 
-[node name="WandInnenOhneLeiste214" parent="." instance=ExtResource("4_mor3f")]
-
 [node name="WandInnenOhneLeiste245" parent="." instance=ExtResource("2_yve43")]
 transform = Transform3D(-1, 0, 8.74226e-08, 0, 1, 0, -8.74226e-08, 0, -1, -16, 0, -1)
 
@@ -4458,8 +4455,8 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -19, 0
 [node name="VersperrteTür2" parent="." instance=ExtResource("18_bergi")]
 transform = Transform3D(1, 0, 2.13163e-14, 0, 1, 0, -2.13163e-14, 0, 1, -28, 0, -1)
 
-[node name="Node3D" parent="." instance=ExtResource("19_5vb5a")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.828422, 2.22962, 2.39737)
+[node name="Barriere" parent="." instance=ExtResource("19_5vb5a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.959744, 2.397, 2.39737)
 
 [node name="LaserGenerator" parent="." instance=ExtResource("20_kgn8y")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 8.5, 0.339, -0.769437)

@@ -18,6 +18,11 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(_delta: float) -> void:
+	if changeable:
+		$"Interactive Component/CollisionShape3D".disabled = false
+	else:
+		$"Interactive Component/CollisionShape3D".disabled = true
+	
 	#print(justLit)
 	justLit -= 1
 	omni_light_3d.visible = lit
