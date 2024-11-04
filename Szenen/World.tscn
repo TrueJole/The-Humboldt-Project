@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://did6uqnw114lc"]
+[gd_scene load_steps=18 format=3 uid="uid://did6uqnw114lc"]
 
 [ext_resource type="Script" path="res://Scripts/applySettings.gd" id="1_c6mct"]
 [ext_resource type="Script" path="res://Tools/ShowOnStart.gd" id="2_ahk6u"]
@@ -11,6 +11,216 @@
 [ext_resource type="PackedScene" uid="uid://dl4e1l3f1unj3" path="res://Szenen/Etage2.tscn" id="10_1osk6"]
 [ext_resource type="PackedScene" uid="uid://cfqy3n888iblk" path="res://Szenen/Etage1.tscn" id="10_jqhs4"]
 [ext_resource type="PackedScene" uid="uid://cdjub5aihdnul" path="res://Szenen/Etage3.tscn" id="11_5s74e"]
+[ext_resource type="PackedScene" uid="uid://8oeythicnpbo" path="res://previewTestWorld.tscn" id="12_fe15p"]
+[ext_resource type="AudioStream" uid="uid://csgfkpnqkkqla" path="res://Resources/Sounds/RandomStep.tres" id="13_koi00"]
+[ext_resource type="AudioStream" uid="uid://bmglpddoo0dii" path="res://Resources/Sounds/DoorClosingShort1.wav" id="14_sod8s"]
+
+[sub_resource type="Animation" id="Animation_d2pcy"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Preview/TürOhneLeiste/Tür/Cylinder:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Preview/TürOhneLeiste/Tür2/Cylinder2:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-3.14159, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Player/Head/Camera3D:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-3.14159, 0, -3.14159)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Player:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1, 2.2, 10)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Preview/TürOhneLeiste/Tür:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Preview/TürOhneLeiste/Tür2:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, -3.14159, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_lxr04"]
+resource_name = "intro"
+length = 9.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Preview/TürOhneLeiste/Tür/Cylinder:rotation")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.66667, 1.7, 2.5, 3, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(0, 0, 0.523599), Vector3(0, 0, 0.523599), Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Preview/TürOhneLeiste/Tür2/Cylinder2:rotation")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.66667, 1.7, 2.5, 3, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-3.14159, 0, 0), Vector3(-3.14159, 0, 0), Vector3(-3.14159, 0, 0), Vector3(-3.14159, 0, -0.523599), Vector3(-3.14159, 0, -0.523599), Vector3(-3.14159, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Player/Head/Camera3D:rotation")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.366667, 1.2, 3.4, 4.43333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-3.14159, 0, -3.14159), Vector3(-2.93215, 0, -3.14159), Vector3(-2.93215, 0, -3.14159), Vector3(-3.14159, 0, -3.14159)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Player:position")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1.06667, 3.9, 7.16667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(1, 2.2, 10), Vector3(1, 2.2, 9.7), Vector3(1, 2.2, 9.7), Vector3(1, 2.2, 8.3)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Preview/TürOhneLeiste/Tür:rotation")
+tracks/4/interp = 2
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(2.63333, 4.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 1.36136, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Preview/TürOhneLeiste/Tür2:rotation")
+tracks/5/interp = 2
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(2.63333, 4.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, -3.14159, 0), Vector3(0, -4.50295, 0)]
+}
+tracks/6/type = "audio"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Player/AudioStreamPlayer3D")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("13_koi00")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("13_koi00")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("13_koi00")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("13_koi00")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("13_koi00")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("13_koi00")
+}],
+"times": PackedFloat32Array(0.1, 0.733333, 4.13333, 4.86667, 5.73333, 6.5204)
+}
+tracks/6/use_blend = true
+tracks/7/type = "audio"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Preview/TürOhneLeiste/AudioStreamPlayer3D")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("14_sod8s")
+}],
+"times": PackedFloat32Array(3.06667)
+}
+tracks/7/use_blend = true
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0e1ny"]
+_data = {
+"RESET": SubResource("Animation_d2pcy"),
+"intro": SubResource("Animation_lxr04")
+}
 
 [node name="World" type="Node3D"]
 top_level = true
@@ -68,13 +278,10 @@ subdiv = 0
 size = Vector3(53.7896, 14.1598, 21.7017)
 data = ExtResource("4_s06mn")
 
-[node name="Player" parent="." instance=ExtResource("6_86xrg")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.841583, 2.59226, 10.5355)
-
 [node name="keller" parent="." instance=ExtResource("9_oo8js")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 4)
 
-[node name="Player2" parent="." instance=ExtResource("10_jqhs4")]
+[node name="Etage1" parent="." instance=ExtResource("10_jqhs4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 3.5, 4)
 
 [node name="Etage2" parent="." instance=ExtResource("10_1osk6")]
@@ -82,3 +289,25 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 7, 4)
 
 [node name="Etage3" parent="." instance=ExtResource("11_5s74e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 10.5, 4)
+
+[node name="Player" parent="." instance=ExtResource("6_86xrg")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 1, 2.2, 10)
+
+[node name="Camera3D" parent="Player/Head" index="1"]
+transform = Transform3D(-1.43833, -1.25743e-07, 0, -1.25743e-07, 1.43833, -1.25743e-07, 1.09928e-14, -1.25743e-07, -1.43833, 0, 0.2, -0.219)
+
+[node name="AudioStreamPlayer3D" parent="Player" index="3"]
+stream = null
+
+[node name="MeshInstance3D" parent="Player" index="4"]
+transform = Transform3D(1, 0, 0, 0, 1.38727, 0, 0, 0, 1, 0, 0.428, 0)
+
+[node name="Preview" parent="." instance=ExtResource("12_fe15p")]
+visible = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_0e1ny")
+}
+
+[editable path="Player"]

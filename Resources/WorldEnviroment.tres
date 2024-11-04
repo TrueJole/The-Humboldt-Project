@@ -31,7 +31,6 @@ sdfgi_y_scale = 0
 glow_normalized = true
 glow_blend_mode = 0
 fog_light_color = Color(0, 0, 0, 1)
-volumetric_fog_enabled = true
 volumetric_fog_density = 0.4
 volumetric_fog_emission = Color(0.00506173, 0.0126897, 0.0686189, 1)
 volumetric_fog_emission_energy = 0.15

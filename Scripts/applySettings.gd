@@ -6,6 +6,13 @@ extends Node3D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	
+	##AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Master"), lerpf(-12, 20, Root.Settings.soundlevel / 100.0))
+	if Root.Settings.soundlevel == 0:
+		AudioServer.set_bus_mute(AudioServer.get_bus_index("Master"), true)
+	else:
+		AudioServer.set_bus_mute(AudioServer.get_bus_index("Master"), false)
+	
 	WEnvironment.ssao_enabled = Root.Settings.ssao
 	WEnvironment.volumetric_fog_enabled = Root.Settings.volumetricFog
 	WEnvironment.ssr_enabled = Root.Settings.ssr

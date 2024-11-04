@@ -1,4 +1,4 @@
-[gd_scene load_steps=93 format=4 uid="uid://dquwqhphaufcb"]
+[gd_scene load_steps=90 format=4 uid="uid://dquwqhphaufcb"]
 
 [ext_resource type="PackedScene" uid="uid://bm7y83q57jaqj" path="res://Game Assets/Walls n Stuff/FloorTile.tscn" id="1_b6a5a"]
 [ext_resource type="Script" path="res://Tools/ShowOnStart.gd" id="1_kqcbx"]
@@ -29,7 +29,6 @@
 [ext_resource type="PackedScene" uid="uid://dhcpkhuhd5bjt" path="res://Game Assets/Deco/Bell.tscn" id="24_gms8d"]
 [ext_resource type="PackedScene" uid="uid://7fk542mc5wfb" path="res://Game Assets/Walls n Stuff/TürMitSchloss.tscn" id="25_2klpb"]
 [ext_resource type="PackedScene" uid="uid://dy0oak3a8liuu" path="res://Game Assets/Walls n Stuff/VersperrteTür.tscn" id="26_fuqor"]
-[ext_resource type="PackedScene" uid="uid://eabibpd22klb" path="res://Game Assets/Walls n Stuff/DoppelTürOhneLeiste.tscn" id="27_ede4f"]
 [ext_resource type="PackedScene" uid="uid://c8ti7ovxqvpgh" path="res://Game Assets/Deco/Automat.tscn" id="28_nqd4h"]
 [ext_resource type="PackedScene" uid="uid://cddt8mq7bfi8w" path="res://Szenen/audio_area_3d.tscn" id="28_w3ycn"]
 [ext_resource type="PackedScene" uid="uid://b0qbing1uirni" path="res://Game Assets/Items/Coin.tscn" id="29_qrmea"]
@@ -62,14 +61,11 @@
 [ext_resource type="AudioStream" uid="uid://cdemxddumls7i" path="res://Resources/Sounds/PuzzleSolvedJingle.wav" id="58_1naj5"]
 [ext_resource type="PackedScene" uid="uid://bvar7yqb8fxjl" path="res://Game Assets/Items/feuerlöscher.tscn" id="58_igy0r"]
 [ext_resource type="PackedScene" uid="uid://b8t31041u720e" path="res://Game Assets/Deco/Spinde.tscn" id="60_7d3bn"]
-[ext_resource type="PackedScene" uid="uid://c613lq67yfqfc" path="res://Game Assets/Walls n Stuff/VersperrteDoppelTür.tscn" id="61_hj6tn"]
 [ext_resource type="PackedScene" uid="uid://dbhplk556y4jk" path="res://Game Assets/Deco/Dyson.tscn" id="62_lpofw"]
 [ext_resource type="PackedScene" uid="uid://0b5hw70fw4wo" path="res://Game Assets/Items/Seife.tscn" id="63_u08f8"]
 [ext_resource type="PackedScene" uid="uid://cfh5e4cxs28o4" path="res://Game Assets/Walls n Stuff/BathroomStall.tscn" id="66_71ddr"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_novj0"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_hwiqg"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f7oa6"]
 resource_name = "Innen"
@@ -311,10 +307,6 @@ ShowOnStart = true
 transform = Transform3D(9.47111, 0, 0, 0, 0.615404, 0, 0, 0, 7.58055, 14.4691, 3.1807, -9.61299)
 mesh = SubResource("BoxMesh_novj0")
 
-[node name="MeshInstance3D7" type="MeshInstance3D" parent="Dach"]
-transform = Transform3D(2.57303, 0, 0, 0, 0.615404, 0, 0, 0, 2.29012, 0.0549471, 5.17632, 6.04529)
-mesh = SubResource("BoxMesh_hwiqg")
-
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Dach"]
 transform = Transform3D(36.8531, 0, 0, 0, 0.616702, 0, 0, 0, 10.1143, 0.431557, 3.1807, -5.0539)
 mesh = SubResource("BoxMesh_novj0")
@@ -340,18 +332,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
 
 [node name="FloorTile2" parent="." instance=ExtResource("1_b6a5a")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
-
-[node name="FloorTile5" parent="." instance=ExtResource("1_b6a5a")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.75, 5)
-
-[node name="FloorTile6" parent="." instance=ExtResource("1_b6a5a")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1.75, 5)
-
-[node name="FloorTile465" parent="." instance=ExtResource("1_b6a5a")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1.75, 6)
-
-[node name="FloorTile467" parent="." instance=ExtResource("1_b6a5a")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.75, 6)
 
 [node name="FloorTile3" parent="." instance=ExtResource("1_b6a5a")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
@@ -3869,30 +3849,6 @@ transform = Transform3D(-1, 0, 2.62268e-07, 0, 1, 0, -2.62268e-07, 0, -1, -1, 0,
 [node name="WandInnenOhneLeiste398" parent="." instance=ExtResource("6_2jhgi")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 5)
 
-[node name="WandInnenOhneLeiste264" parent="." instance=ExtResource("4_dew31")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1, 1.75, 6)
-
-[node name="WandInnenOhneLeiste445" parent="." instance=ExtResource("6_2jhgi")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1, 1.75, 5)
-
-[node name="WandInnenOhneLeiste266" parent="." instance=ExtResource("4_dew31")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1, 1.75, 7)
-
-[node name="WandInnenOhneLeiste447" parent="." instance=ExtResource("6_2jhgi")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1, 1.75, 6)
-
-[node name="WandInnenOhneLeiste321" parent="." instance=ExtResource("4_dew31")]
-transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 1, 1.75, 6)
-
-[node name="WandInnenOhneLeiste449" parent="." instance=ExtResource("6_2jhgi")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1, 1.75, 7)
-
-[node name="WandInnenOhneLeiste268" parent="." instance=ExtResource("4_dew31")]
-transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 1, 1.75, 5)
-
-[node name="WandInnenOhneLeiste451" parent="." instance=ExtResource("6_2jhgi")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1, 1.75, 6)
-
 [node name="WandInnenOhneLeiste148" parent="." instance=ExtResource("4_dew31")]
 transform = Transform3D(-1, 0, 2.62268e-07, 0, 1, 0, -2.62268e-07, 0, -1, 2, 0, 5)
 
@@ -5050,9 +5006,6 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -16.93
 [node name="VersperrteTür" parent="." instance=ExtResource("26_fuqor")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 0, -4)
 
-[node name="Node3D" parent="." instance=ExtResource("27_ede4f")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 1.75, 5)
-
 [node name="AudioArea3D" parent="." instance=ExtResource("28_w3ycn")]
 collision_layer = 8
 
@@ -6051,9 +6004,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, -1)
 
 [node name="VersperrteTür5" parent="." instance=ExtResource("26_fuqor")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -30, 0, -3)
-
-[node name="DoppelTürOhneLeiste" parent="." instance=ExtResource("61_hj6tn")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 1.74919, 7)
 
 [node name="TürMitLeiste11" parent="." instance=ExtResource("5_y7nst")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24, 0, 2)

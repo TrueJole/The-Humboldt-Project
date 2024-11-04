@@ -15,6 +15,7 @@ func on_scene_loaded() -> void:
 
 func default_settings() -> void:
 	print('applied default settings')
+	Settings.soundlevel = 80
 	Settings.ssao = true
 	Settings.volumetricFog = true
 	Settings.ssr = false

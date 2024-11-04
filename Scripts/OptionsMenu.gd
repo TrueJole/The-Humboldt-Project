@@ -4,6 +4,8 @@ extends Control
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void: 
 	print(Root.Settings)
+	$PanelContainer/HBoxContainer/VBoxContainer/soundLabel.text = "Lautstärke: " + str(Root.Settings.soundlevel) + "%"
+	$PanelContainer/HBoxContainer/VBoxContainer/soundSlider.value = Root.Settings.soundlevel
 	get_node("PanelContainer/HBoxContainer/VBoxContainer/ssaoToggleButton").button_pressed = Root.Settings.ssao
 	get_node("PanelContainer/HBoxContainer/VBoxContainer/volFogToggleButton").button_pressed = Root.Settings.volumetricFog
 	get_node("PanelContainer/HBoxContainer/VBoxContainer/SSIL").button_pressed = Root.Settings.ssil
@@ -26,6 +28,12 @@ func _ready() -> void:
 	applySettings()
 
 func applySettings() -> void:
+	
+	#AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Master"), lerpf(-12, 20, Root.Settings.soundlevel / 100.0))
+	if Root.Settings.soundlevel == 0:
+		AudioServer.set_bus_mute(AudioServer.get_bus_index("Master"), true)
+	else:
+		AudioServer.set_bus_mute(AudioServer.get_bus_index("Master"), false)
 	
 	if Root.Settings.hiResRain:
 		#$"/root/root/SubViewport".size_2d_override = Vector2(1920, 1920)
@@ -184,4 +192,10 @@ func _on_mouse_slider_value_changed(value: float) -> void:
 
 func _on_hi_res_rain_toggle_button_toggled(toggled_on: bool) -> void:
 	Root.Settings.hiResRain = toggled_on
+	applySettings()
+
+
+func _on_sound_slider_value_changed(value: float) -> void:
+	Root.Settings.soundlevel = value
+	$PanelContainer/HBoxContainer/VBoxContainer/soundLabel.text = "Lautstärke: " + str(Root.Settings.soundlevel) + "%"
 	applySettings()

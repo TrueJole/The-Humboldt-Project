@@ -16,6 +16,7 @@ extends Resource
 @export var fpsMode: int = 1
 @export var mousesens: float = 0.002
 @export var scale3D: float = 1
+@export var soundlevel: float = 1
 #@export var resolutionX: int
 #@export var resolutionY: int
 

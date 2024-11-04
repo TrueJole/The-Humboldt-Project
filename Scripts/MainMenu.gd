@@ -23,9 +23,24 @@ func _process(_delta: float) -> void:
 		loadingBar.value = min(progress[0] * 100.0, 99)
 		if progress[0] == 1:
 			
-			
+		
+			#get_node("../Preview").free()
 			get_parent().add_child(ResourceLoader.load_threaded_get(nextScene).instantiate())
+		
 			RenderingServer.viewport_set_msaa_2d(get_tree().get_root().get_viewport_rid(), RenderingServer.VIEWPORT_MSAA_DISABLED)
+
+			
+			#$"../Preview/Player/Head/Camera3D".current = false
+			
+			#$"../World/Player/Head/Camera3D".current = true
+			
+			
+			#$"../World/Preview/Player".free()
+			
+		
+			
+			#$"../World/AnimationPlayer".play('intro')
+
 			queue_free()
 
 
