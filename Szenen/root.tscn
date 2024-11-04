@@ -70,9 +70,6 @@ script = null
 transform = Transform3D(-1.43833, 2.17182e-07, 1.09928e-14, 2.17182e-07, 1.43833, 2.17182e-07, 2.18007e-14, 2.17182e-07, -1.43833, 0, 0.2, -0.219)
 script = null
 
-[node name="SpotLight3D" parent="Preview/Player/Head/Camera3D" index="0"]
-baseTime = 0
-
 [node name="Cursor" parent="Preview/Player/Head/Camera3D" index="2"]
 visible = false
 

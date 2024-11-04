@@ -14,11 +14,11 @@
 [ext_resource type="PackedScene" uid="uid://bm7y83q57jaqj" path="res://Game Assets/Walls n Stuff/FloorTile.tscn" id="13_37mnv"]
 [ext_resource type="AudioStream" uid="uid://csgfkpnqkkqla" path="res://Resources/Sounds/RandomStep.tres" id="13_koi00"]
 [ext_resource type="PackedScene" uid="uid://b3k65sjuw8040" path="res://Game Assets/Walls n Stuff/WandInnenEinfarbig.tscn" id="14_fexee"]
-[ext_resource type="AudioStream" uid="uid://bmglpddoo0dii" path="res://Resources/Sounds/DoorClosingShort1.wav" id="14_sod8s"]
 [ext_resource type="PackedScene" uid="uid://cf6we7nmx02og" path="res://Game Assets/Walls n Stuff/WandAußenNeu.tscn" id="15_3itrc"]
 [ext_resource type="PackedScene" uid="uid://eabibpd22klb" path="res://Game Assets/Walls n Stuff/DoppelTürOhneLeiste.tscn" id="16_6whm2"]
 [ext_resource type="Shader" path="res://Scripts/vignette.gdshader" id="17_fqbt3"]
 [ext_resource type="PackedScene" uid="uid://c613lq67yfqfc" path="res://Game Assets/Walls n Stuff/VersperrteDoppelTür.tscn" id="17_hwmqp"]
+[ext_resource type="AudioStream" uid="uid://drb6obed6hyfo" path="res://Resources/Sounds/DoorClosingLong1.wav" id="19_q33vt"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_pqy3d"]
 shader = ExtResource("17_fqbt3")
@@ -204,7 +204,8 @@ tracks/5/keys = {
 
 [sub_resource type="Animation" id="Animation_lxr04"]
 resource_name = "intro"
-length = 9.0
+length = 7.2
+step = 0.016
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -314,17 +315,17 @@ tracks/6/keys = {
 tracks/6/use_blend = true
 tracks/7/type = "audio"
 tracks/7/imported = false
-tracks/7/enabled = false
+tracks/7/enabled = true
 tracks/7/path = NodePath("Preview/TürOhneLeiste/AudioStreamPlayer3D")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
 "clips": [{
 "end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("14_sod8s")
+"start_offset": 1.2648,
+"stream": ExtResource("19_q33vt")
 }],
-"times": PackedFloat32Array(3.06667)
+"times": PackedFloat32Array(2.4127)
 }
 tracks/7/use_blend = true
 
