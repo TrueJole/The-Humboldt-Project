@@ -29,7 +29,7 @@ func _ready() -> void:
 
 func applySettings() -> void:
 	
-	#AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Master"), lerpf(-12, 20, Root.Settings.soundlevel / 100.0))
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Master"), lerpf(-12, 20, Root.Settings.soundlevel / 100.0))
 	if Root.Settings.soundlevel == 0:
 		AudioServer.set_bus_mute(AudioServer.get_bus_index("Master"), true)
 	else:

@@ -1,11 +1,10 @@
-[gd_scene load_steps=20 format=3 uid="uid://dy4ptaa6dtvyu"]
+[gd_scene load_steps=18 format=3 uid="uid://dy4ptaa6dtvyu"]
 
 [ext_resource type="Script" path="res://Scripts/CharacterController.gd" id="1_c8kcr"]
 [ext_resource type="CameraAttributesPractical" uid="uid://cfllxe7h4a6lo" path="res://Resources/CameraAttributes.tres" id="2_ijyeg"]
 [ext_resource type="Script" path="res://Scripts/Hand.gd" id="3_g3gao"]
 [ext_resource type="Texture2D" uid="uid://bcauowill6bhy" path="res://Assets/Materials/Textures/Cursor_Punkt.png" id="4_8u4cr"]
 [ext_resource type="Script" path="res://Scripts/flicker.gd" id="4_g71aj"]
-[ext_resource type="AudioStream" uid="uid://dsnp0bl25mc7o" path="res://Resources/Sounds/Step.wav" id="5_lpcba"]
 [ext_resource type="Shader" path="res://Scripts/vignette.gdshader" id="6_6q5m7"]
 [ext_resource type="Material" uid="uid://ddcmnt44ha8gd" path="res://Scripts/WaterShader.tres" id="7_vpvg2"]
 
@@ -20,12 +19,6 @@ height = 2.822
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4bphk"]
 height = 1.50172
-
-[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_sxqim"]
-playback_mode = 2
-random_pitch = 1.2
-streams_count = 1
-stream_0/stream = ExtResource("5_lpcba")
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_ud774"]
 radial_segments = 20
@@ -247,7 +240,6 @@ disabled = true
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, -0.379436, 0)
-stream = SubResource("AudioStreamRandomizer_sxqim")
 volume_db = -5.0
 unit_size = 3.0
 pitch_scale = 1.1

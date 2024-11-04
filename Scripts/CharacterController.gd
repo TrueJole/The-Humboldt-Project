@@ -24,6 +24,8 @@ var lampOn: bool = false
 var previouslyOnFloor:bool
 #var testX = 0
 
+const STEPSOUND: Resource = preload("res://Resources/Sounds/RandomStep.tres")
+
 @onready var waterOverlay: ColorRect = $Head/Camera3D/WaterOverlay
 
 
@@ -36,13 +38,15 @@ var state: int
 var walkTimer: float
 
 func walkSound() -> void:
+	stepAudio.stream = STEPSOUND
 	stepAudio.play()
 	walkTimer = walkTime * (1 + 2.0/state)
 
 	
 
 func _ready() -> void:
-	#print_debug(node_path.get_as_property_path())
+	
+	#print_debug(node_path.get_as_property_path())$CollisionShape3DSneak
 	print('VSYNC MODE ', DisplayServer.window_get_vsync_mode(DisplayServer.get_window_list()[0]), ' - ', Engine.max_fps)
 	print('3D Scale ', get_tree().root.scaling_3d_scale)
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)

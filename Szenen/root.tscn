@@ -1,9 +1,87 @@
-[gd_scene load_steps=3 format=3 uid="uid://dju6cwg4tmum2"]
+[gd_scene load_steps=11 format=3 uid="uid://dju6cwg4tmum2"]
 
 [ext_resource type="PackedScene" uid="uid://ccdcruw7mockq" path="res://Szenen/MainMenu.tscn" id="1_0odwc"]
+[ext_resource type="PackedScene" uid="uid://bm7y83q57jaqj" path="res://Game Assets/Walls n Stuff/FloorTile.tscn" id="1_4wgoi"]
+[ext_resource type="PackedScene" uid="uid://b3k65sjuw8040" path="res://Game Assets/Walls n Stuff/WandInnenEinfarbig.tscn" id="2_s2hgo"]
+[ext_resource type="PackedScene" uid="uid://cf6we7nmx02og" path="res://Game Assets/Walls n Stuff/WandAußenNeu.tscn" id="3_xf8ac"]
 [ext_resource type="PackedScene" uid="uid://dwqbqv31lsyhy" path="res://Szenen/RegenModul.tscn" id="4_0247n"]
+[ext_resource type="PackedScene" uid="uid://eabibpd22klb" path="res://Game Assets/Walls n Stuff/DoppelTürOhneLeiste.tscn" id="4_tlgcf"]
+[ext_resource type="PackedScene" uid="uid://c613lq67yfqfc" path="res://Game Assets/Walls n Stuff/VersperrteDoppelTür.tscn" id="5_p2ugd"]
+[ext_resource type="PackedScene" uid="uid://dy4ptaa6dtvyu" path="res://Szenen/Player.tscn" id="6_kttrp"]
+[ext_resource type="Environment" uid="uid://b2qrgn2jq4hxf" path="res://Resources/WorldEnviroment.tres" id="7_of57h"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_pxd2g"]
 
 [node name="root" type="Node"]
+
+[node name="Preview" type="Node3D" parent="."]
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="Preview"]
+transform = Transform3D(2.57303, 0, 0, 0, 0.615404, 0, 0, 0, 2.29012, 0.0549471, 5.17632, 6.04529)
+mesh = SubResource("BoxMesh_pxd2g")
+
+[node name="FloorTile5" parent="Preview" instance=ExtResource("1_4wgoi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.75, 5)
+
+[node name="FloorTile6" parent="Preview" instance=ExtResource("1_4wgoi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1.75, 5)
+
+[node name="FloorTile465" parent="Preview" instance=ExtResource("1_4wgoi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1.75, 6)
+
+[node name="FloorTile467" parent="Preview" instance=ExtResource("1_4wgoi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.75, 6)
+
+[node name="WandInnenOhneLeiste264" parent="Preview" instance=ExtResource("2_s2hgo")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1, 1.75, 6)
+
+[node name="WandInnenOhneLeiste445" parent="Preview" instance=ExtResource("3_xf8ac")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1, 1.75, 5)
+
+[node name="WandInnenOhneLeiste266" parent="Preview" instance=ExtResource("2_s2hgo")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1, 1.75, 7)
+
+[node name="WandInnenOhneLeiste447" parent="Preview" instance=ExtResource("3_xf8ac")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1, 1.75, 6)
+
+[node name="WandInnenOhneLeiste321" parent="Preview" instance=ExtResource("2_s2hgo")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 1, 1.75, 6)
+
+[node name="WandInnenOhneLeiste449" parent="Preview" instance=ExtResource("3_xf8ac")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1, 1.75, 7)
+
+[node name="WandInnenOhneLeiste268" parent="Preview" instance=ExtResource("2_s2hgo")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 1, 1.75, 5)
+
+[node name="WandInnenOhneLeiste451" parent="Preview" instance=ExtResource("3_xf8ac")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1, 1.75, 6)
+
+[node name="TürOhneLeiste" parent="Preview" instance=ExtResource("4_tlgcf")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 1.75, 5)
+
+[node name="DoppelTürOhneLeiste" parent="Preview" instance=ExtResource("5_p2ugd")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 1.74919, 7)
+
+[node name="Player" parent="Preview" instance=ExtResource("6_kttrp")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 2.2, 6)
+script = null
+
+[node name="Camera3D" parent="Preview/Player/Head" index="1"]
+transform = Transform3D(-1.43833, 2.17182e-07, 1.09928e-14, 2.17182e-07, 1.43833, 2.17182e-07, 2.18007e-14, 2.17182e-07, -1.43833, 0, 0.2, -0.219)
+script = null
+
+[node name="SpotLight3D" parent="Preview/Player/Head/Camera3D" index="0"]
+baseTime = 0
+
+[node name="Cursor" parent="Preview/Player/Head/Camera3D" index="2"]
+visible = false
+
+[node name="Hand" parent="Preview/Player/Head/Camera3D" index="3"]
+visible = false
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Preview"]
+process_mode = 3
+environment = ExtResource("7_of57h")
 
 [node name="SubViewport" parent="." instance=ExtResource("4_0247n")]
 
@@ -17,3 +95,5 @@ offset_right = 1907.0
 offset_bottom = 501.0
 theme_override_font_sizes/font_size = 20
 text = "DEBUGINFO"
+
+[editable path="Preview/Player"]
