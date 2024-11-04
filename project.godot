@@ -194,7 +194,7 @@ joyRight={
 common/physics_ticks_per_second=30
 3d/physics_engine="JoltPhysics3D"
 3d/default_gravity=9.81
-jolt_3d/solver/position_iterations=10
+jolt_3d/solver/position_iterations=16
 jolt_3d/solver/contact_speculative_distance=0.01
 jolt_3d/solver/contact_allowed_penetration=0.01
 

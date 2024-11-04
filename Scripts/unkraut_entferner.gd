@@ -13,7 +13,7 @@ func _ready() -> void:
 	particles.emitting = false
 
 func used() -> void:
-	print_debug('used')
+	#print_debug('used')
 	emit = true
 	if emitting == false:
 		animation.play("on")
