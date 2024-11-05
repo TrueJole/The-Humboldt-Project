@@ -24,7 +24,7 @@ roughness = 0.4
 size = Vector3(0.256823, 0.0784298, 0.25869)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hpsm5"]
-size = Vector3(0.166522, 0.0566459, 0.0373362)
+size = Vector3(0.179387, 0.0934461, 0.0530352)
 
 [node name="Projektor" instance=ExtResource("1_oxmsp")]
 script = ExtResource("2_fj0hs")
@@ -66,7 +66,7 @@ script = ExtResource("2_origj")
 activators = Array[String](["cart"])
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Activation Module" index="0"]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.00331131, 0.0591266, 0.000179579)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.00364916, 0.0487062, -0.00052459)
 shape = SubResource("BoxShape3D_hpsm5")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." index="4"]

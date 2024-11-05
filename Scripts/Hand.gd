@@ -67,6 +67,7 @@ func _physics_process(_delta: float) -> void:
 			heldObject.gravity_scale = 0
 			heldObject.set_collision_mask_value(3, false)
 			heldObject.set_meta('held', true)
+			heldObject.freeze = false
 			
 	
 	elif heldObject != null:

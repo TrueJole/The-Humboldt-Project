@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=4 uid="uid://cfqy3n888iblk"]
+[gd_scene load_steps=57 format=4 uid="uid://cfqy3n888iblk"]
 
 [ext_resource type="PackedScene" uid="uid://bm7y83q57jaqj" path="res://Game Assets/Walls n Stuff/FloorTile.tscn" id="1_8e773"]
 [ext_resource type="Script" path="res://Tools/ShowOnStart.gd" id="1_pc36m"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://64cfsukhr3v3" path="res://Game Assets/Deco/Toilette.tscn" id="11_f4jd6"]
 [ext_resource type="PackedScene" uid="uid://dvkhlvy7ssp4k" path="res://Game Assets/Deco/Tisch.tscn" id="12_b8bbg"]
 [ext_resource type="PackedScene" uid="uid://xobymtoepjql" path="res://Game Assets/Deco/Stuhl.tscn" id="13_0sdwn"]
+[ext_resource type="Texture2D" uid="uid://cf78iqihtlfn0" path="res://Assets/Materials/Textures/Rätsel1Hilfe.png" id="13_esh8q"]
 [ext_resource type="PackedScene" uid="uid://b8sx33xq2lf6e" path="res://Game Assets/Decals/BlutDecal.tscn" id="14_uw001"]
 [ext_resource type="PackedScene" uid="uid://whngmggv7mwp" path="res://Game Assets/Deco/RollStuhl.tscn" id="15_ouog3"]
 [ext_resource type="PackedScene" uid="uid://dhcpkhuhd5bjt" path="res://Game Assets/Deco/Bell.tscn" id="16_0dhgg"]
@@ -39,6 +40,9 @@
 [ext_resource type="PackedScene" uid="uid://dpo0io7glisbf" path="res://Game Assets/Deco/Schrank.tscn" id="37_14rwo"]
 [ext_resource type="PackedScene" uid="uid://bofpn4rubvt68" path="res://Game Assets/Deco/SchrankGroß.tscn" id="38_ai1dc"]
 [ext_resource type="PackedScene" uid="uid://cddt8mq7bfi8w" path="res://Szenen/audio_area_3d.tscn" id="39_21nvm"]
+[ext_resource type="PackedScene" uid="uid://crguvbqvdpj3j" path="res://Game Assets/Deco/RoundLamp.tscn" id="41_fx36p"]
+[ext_resource type="PackedScene" uid="uid://cflfhgcbe4ohj" path="res://Game Assets/Items/audioCartridge.tscn" id="42_hck8a"]
+[ext_resource type="AudioStream" uid="uid://q43r2ley20sj" path="res://Resources/Sounds/Theme_2.mp3" id="43_h3d4u"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_perbj"]
 
@@ -3768,10 +3772,22 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 19.080
 leftRotation = 0.092
 rightRotation = 0.156
 
+[node name="Sprite3D" type="Sprite3D" parent="KreideTafel7"]
+transform = Transform3D(0.102698, 0, 0, 0, 0.102698, 0, 0, 0, 0.102698, 1.40127, 1.56858, 0.255919)
+shaded = true
+double_sided = false
+texture = ExtResource("13_esh8q")
+
 [node name="KreideTafel8" parent="." instance=ExtResource("10_mqx4x")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 19.0808, -0.147495, -11.6147)
 leftRotation = 0.032
 rightRotation = 0.05
+
+[node name="Sprite3D" type="Sprite3D" parent="KreideTafel8"]
+transform = Transform3D(0.102698, 0, 0, 0, 0.102698, 0, 0, 0, 0.102698, 1.40127, 1.56858, 0.255919)
+shaded = true
+double_sided = false
+texture = ExtResource("13_esh8q")
 
 [node name="KreideTafel2" parent="." instance=ExtResource("10_mqx4x")]
 transform = Transform3D(-3.88929e-08, 0, -0.889765, 0, 0.889765, 0, 0.889765, 0, -3.88929e-08, -9.95677, -0.0526536, -8.27009)
@@ -4498,66 +4514,6 @@ layers = 2
 mesh = SubResource("BoxMesh_j3nft")
 surface_material_override/0 = SubResource("StandardMaterial3D_b514t")
 
-[node name="Cube2" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5991, 0.333204, -12.4957)
-collision_layer = 2
-collision_mask = 3
-metadata/mirror = true
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Cube2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000259399, 0, -0.000335693)
-shape = SubResource("BoxShape3D_h7l5f")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Cube2"]
-transform = Transform3D(0.677772, 0, 0, 0, 0.677772, 0, 0, 0, 0.677772, 0, 0, 0)
-mesh = SubResource("BoxMesh_j3nft")
-surface_material_override/0 = SubResource("StandardMaterial3D_b514t")
-
-[node name="Cube3" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.1359, 0.333204, -12.4957)
-collision_layer = 2
-collision_mask = 3
-metadata/mirror = true
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Cube3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000259399, 0, -0.000335693)
-shape = SubResource("BoxShape3D_h7l5f")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Cube3"]
-transform = Transform3D(0.677772, 0, 0, 0, 0.677772, 0, 0, 0, 0.677772, 0, 0, 0)
-mesh = SubResource("BoxMesh_j3nft")
-surface_material_override/0 = SubResource("StandardMaterial3D_b514t")
-
-[node name="Cube4" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.7313, 0.333204, -12.4957)
-collision_layer = 2
-collision_mask = 3
-metadata/mirror = true
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Cube4"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000259399, 0, -0.000335693)
-shape = SubResource("BoxShape3D_h7l5f")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Cube4"]
-transform = Transform3D(0.677772, 0, 0, 0, 0.677772, 0, 0, 0, 0.677772, 0, 0, 0)
-mesh = SubResource("BoxMesh_j3nft")
-surface_material_override/0 = SubResource("StandardMaterial3D_b514t")
-
-[node name="Cube5" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.4751, 0.333204, -12.4957)
-collision_layer = 2
-collision_mask = 3
-metadata/mirror = true
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Cube5"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000259399, 0, -0.000335693)
-shape = SubResource("BoxShape3D_h7l5f")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Cube5"]
-transform = Transform3D(0.677772, 0, 0, 0, 0.677772, 0, 0, 0, 0.677772, 0, 0, 0)
-mesh = SubResource("BoxMesh_j3nft")
-surface_material_override/0 = SubResource("StandardMaterial3D_b514t")
-
 [node name="Slope" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.0223, 0.338323, -12.4999)
 collision_layer = 2
@@ -4613,7 +4569,7 @@ stream = ExtResource("24_801o6")
 unit_size = 5.0
 
 [node name="LaserReceiver3" parent="." instance=ExtResource("21_msvfi")]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 12.0803, 3.22784, -10)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 12.0803, 3.28473, -10)
 
 [node name="TürMitSchloss" parent="." instance=ExtResource("25_isr6i")]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -9, 0, -4)
@@ -4774,6 +4730,16 @@ collision_layer = 8
 [node name="CollisionShape3D" parent="AudioArea3D" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5793, 1.69937, -2.51584)
 shape = SubResource("BoxShape3D_aknwp")
+
+[node name="RoundLamp" parent="." instance=ExtResource("41_fx36p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.3317, -0.152354, 1.87856)
+
+[node name="RoundLamp2" parent="." instance=ExtResource("41_fx36p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.3317, -0.152354, -10.1661)
+
+[node name="Cartridge" parent="." instance=ExtResource("42_hck8a")]
+transform = Transform3D(-1, 0, 8.74228e-08, 8.74228e-08, -4.37114e-08, 1, 3.82137e-15, 1, 4.37114e-08, -29.577, 0.61933, -9.08703)
+metadata/audioData = ExtResource("43_h3d4u")
 
 [editable path="TürMitSchloss"]
 [editable path="TürMitSchloss/Activation Module"]

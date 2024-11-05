@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://cflfhgcbe4ohj"]
+
+[ext_resource type="PackedScene" uid="uid://bbtev5l7d38pg" path="res://Game Assets/Items/Cartridge.tscn" id="1_xmkqg"]
+
+[node name="Cartridge" instance=ExtResource("1_xmkqg")]
+metadata/audioData = null
+
+[node name="CollisionShape3D" parent="." index="1"]
+transform = Transform3D(1.21712, 0, 0, 0, -5.32021e-08, -1.21712, 0, 1.21712, -5.32021e-08, 6.893e-05, -0.00306531, -0.000568054)

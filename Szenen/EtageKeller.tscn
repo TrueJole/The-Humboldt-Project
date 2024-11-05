@@ -1,4 +1,4 @@
-[gd_scene load_steps=90 format=4 uid="uid://dquwqhphaufcb"]
+[gd_scene load_steps=89 format=4 uid="uid://dquwqhphaufcb"]
 
 [ext_resource type="PackedScene" uid="uid://bm7y83q57jaqj" path="res://Game Assets/Walls n Stuff/FloorTile.tscn" id="1_b6a5a"]
 [ext_resource type="Script" path="res://Tools/ShowOnStart.gd" id="1_kqcbx"]
@@ -21,10 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://buhgn4nby2tml" path="res://Game Assets/Items/Donut.tscn" id="15_us87p"]
 [ext_resource type="PackedScene" uid="uid://bync8snl5bq20" path="res://Game Assets/Deco/MülleimerKlein.tscn" id="16_15lwx"]
 [ext_resource type="PackedScene" uid="uid://dpo0io7glisbf" path="res://Game Assets/Deco/Schrank.tscn" id="17_0fjf0"]
-[ext_resource type="PackedScene" uid="uid://gjyr1kpvo1u7" path="res://Game Assets/Items/Schlüssel.tscn" id="18_kj346"]
-[ext_resource type="PackedScene" uid="uid://bbtev5l7d38pg" path="res://Game Assets/Items/Cartridge.tscn" id="19_74nwk"]
 [ext_resource type="PackedScene" uid="uid://blvxxxj44qb66" path="res://Game Assets/Deco/Uhr.tscn" id="20_msb2g"]
-[ext_resource type="PackedScene" uid="uid://df87isk1ee1nq" path="res://Game Assets/Deco/Projektor.tscn" id="21_e0vf5"]
 [ext_resource type="PackedScene" uid="uid://c7m75ist077sw" path="res://Game Assets/Deco/Spider.tscn" id="23_w83a8"]
 [ext_resource type="PackedScene" uid="uid://dhcpkhuhd5bjt" path="res://Game Assets/Deco/Bell.tscn" id="24_gms8d"]
 [ext_resource type="PackedScene" uid="uid://7fk542mc5wfb" path="res://Game Assets/Walls n Stuff/TürMitSchloss.tscn" id="25_2klpb"]
@@ -62,7 +59,9 @@
 [ext_resource type="PackedScene" uid="uid://bvar7yqb8fxjl" path="res://Game Assets/Items/feuerlöscher.tscn" id="58_igy0r"]
 [ext_resource type="PackedScene" uid="uid://b8t31041u720e" path="res://Game Assets/Deco/Spinde.tscn" id="60_7d3bn"]
 [ext_resource type="PackedScene" uid="uid://dbhplk556y4jk" path="res://Game Assets/Deco/Dyson.tscn" id="62_lpofw"]
+[ext_resource type="PackedScene" uid="uid://cflfhgcbe4ohj" path="res://Game Assets/Items/audioCartridge.tscn" id="63_n223f"]
 [ext_resource type="PackedScene" uid="uid://0b5hw70fw4wo" path="res://Game Assets/Items/Seife.tscn" id="63_u08f8"]
+[ext_resource type="AudioStream" uid="uid://d3dpj3u3ge6gm" path="res://Resources/Sounds/Terror_Tango.mp3" id="64_hqoyk"]
 [ext_resource type="PackedScene" uid="uid://cfh5e4cxs28o4" path="res://Game Assets/Walls n Stuff/BathroomStall.tscn" id="66_71ddr"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_novj0"]
@@ -4973,12 +4972,6 @@ transform = Transform3D(0.999999, 0, 0.00136116, 0, 1, 0, -0.00136116, 0, 0.9999
 [node name="Schrank" parent="." instance=ExtResource("17_0fjf0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.5583, -0.000499986, -4.34364)
 
-[node name="Schlüssel" parent="." instance=ExtResource("18_kj346")]
-transform = Transform3D(-4.37114e-08, 0, -1, -1, -4.37114e-08, 4.37114e-08, -4.37114e-08, 1, 1.91069e-15, -32.4037, 0.0480377, -4.30315)
-
-[node name="Cartridge" parent="." instance=ExtResource("19_74nwk")]
-transform = Transform3D(-1, 0, -5.96046e-08, -2.09753e-08, 0.936035, 0.351907, 5.5792e-08, 0.351907, -0.936035, -32.987, 1.46868, -4.18444)
-
 [node name="Uhr" parent="." instance=ExtResource("20_msb2g")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -26.1003, 1.87893, -7.47897)
 
@@ -4996,9 +4989,6 @@ transform = Transform3D(-4.37114e-08, 1, 4.37114e-08, 0, -4.37114e-08, 1, 1, 4.3
 
 [node name="Buch7" parent="." instance=ExtResource("14_0l2p2")]
 transform = Transform3D(-4.09122e-08, 0.935961, 0.352103, 1.53909e-08, -0.352103, 0.935961, 1, 4.37114e-08, 1.91069e-15, -32.1019, 1.10588, -4.30413)
-
-[node name="Projektor" parent="." instance=ExtResource("21_e0vf5")]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -32.5265, 0.605273, -7.84621)
 
 [node name="Spider" parent="." instance=ExtResource("23_w83a8")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -16.9317, -0.46497, -2.58637)
@@ -5925,7 +5915,7 @@ stream = ExtResource("58_1naj5")
 max_db = 0.0
 
 [node name="Feuerlöscher" parent="." instance=ExtResource("58_igy0r")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.2996, -0.000500083, -5.68299)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 12.4345, -0.000500083, -1.20204)
 
 [node name="Coin4" parent="." instance=ExtResource("29_qrmea")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.1677, -0.000499964, -2.95235)
@@ -6070,6 +6060,10 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -20.90
 
 [node name="BathroomStall2" parent="." instance=ExtResource("66_71ddr")]
 transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -21.0999, 0, 2.86161)
+
+[node name="Cartridge2" parent="." instance=ExtResource("63_n223f")]
+transform = Transform3D(-1, 0, -8.74228e-08, -4.37114e-08, 0.866025, 0.5, 7.57103e-08, 0.5, -0.866025, -32.6029, 1.46117, -4.17595)
+metadata/audioData = ExtResource("64_hqoyk")
 
 [connection signal="body_entered" from="Wasser/Area3D" to="Wasser/Area3D" method="_on_body_entered"]
 [connection signal="body_exited" from="Wasser/Area3D" to="Wasser/Area3D" method="_on_body_exited"]

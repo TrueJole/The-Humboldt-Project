@@ -89,11 +89,11 @@ libraries = {
 }
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00156433, 0.0261357, -0.0820984)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00156433, 0.0261357, 0.00777061)
 shape = SubResource("BoxShape3D_jr3o5")
 
 [node name="BézierCurve" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.85895e-13, -1.83368e-08, -0.0138299, -0.0141858, -1.83368e-08, 0, -5.13525e-08, 0.00506542, -5.00641e-08, 0.00149138, 0.0307321, 0.0160227)
+transform = Transform3D(1.85895e-13, -1.83368e-08, -0.0138299, -0.0141858, -1.83368e-08, 8.23655e-19, -5.13525e-08, 0.00506542, -5.00641e-08, 0.00149138, 0.0307321, 0.0160227)
 gi_mode = 0
 visibility_range_end = 20.0
 mesh = SubResource("ArrayMesh_x81lk")

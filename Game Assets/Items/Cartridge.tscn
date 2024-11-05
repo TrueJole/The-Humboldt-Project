@@ -8,7 +8,7 @@
 albedo_texture = ExtResource("2_si6vs")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_rdbna"]
-size = Vector3(0.144117, 0.0186434, 0.0998726)
+size = Vector3(0.144117, 0.0189653, 0.0998726)
 
 [node name="Cartridge" instance=ExtResource("1_evsl2")]
 collision_layer = 2

@@ -1,4 +1,4 @@
-[gd_scene load_steps=79 format=4 uid="uid://dl4e1l3f1unj3"]
+[gd_scene load_steps=81 format=4 uid="uid://dl4e1l3f1unj3"]
 
 [ext_resource type="PackedScene" uid="uid://btre2blkv33rc" path="res://Szenen/Dach.tscn" id="1_m6fo4"]
 [ext_resource type="PackedScene" uid="uid://bm7y83q57jaqj" path="res://Game Assets/Walls n Stuff/FloorTile.tscn" id="2_a3swf"]
@@ -21,7 +21,6 @@
 [ext_resource type="PackedScene" uid="uid://dal27bo6xe78" path="res://Game Assets/Deco/Monitor.tscn" id="16_82px7"]
 [ext_resource type="PackedScene" uid="uid://bxi2me5stma5t" path="res://Game Assets/Deco/NormalerTisch.tscn" id="18_2m7jc"]
 [ext_resource type="PackedScene" uid="uid://gjyr1kpvo1u7" path="res://Game Assets/Items/Schlüssel.tscn" id="18_2pkfl"]
-[ext_resource type="PackedScene" uid="uid://c8yc1kp3ps17j" path="res://Game Assets/Deco/TempEnde.tscn" id="18_r4o85"]
 [ext_resource type="Script" path="res://Scripts/Etage2Rätsel.gd" id="18_xuvl7"]
 [ext_resource type="Material" uid="uid://bk3fedv3l0f2d" path="res://Assets/Materials/WandBeige.tres" id="19_0isbn"]
 [ext_resource type="PackedScene" uid="uid://xobymtoepjql" path="res://Game Assets/Deco/Stuhl.tscn" id="19_ghe1m"]
@@ -66,6 +65,9 @@
 [ext_resource type="PackedScene" uid="uid://j6qjjro6uuci" path="res://Game Assets/Walls n Stuff/Halbwand.tscn" id="63_6rwdc"]
 [ext_resource type="PackedScene" uid="uid://0bnbh7lwk0t0" path="res://Game Assets/PlantMonster.tscn" id="65_2aob5"]
 [ext_resource type="PackedScene" uid="uid://cddt8mq7bfi8w" path="res://Szenen/audio_area_3d.tscn" id="66_nkopl"]
+[ext_resource type="PackedScene" uid="uid://cflfhgcbe4ohj" path="res://Game Assets/Items/audioCartridge.tscn" id="67_64d4t"]
+[ext_resource type="AudioStream" uid="uid://djw01hxvxevey" path="res://Resources/Sounds/FX_Song.mp3" id="68_a3emr"]
+[ext_resource type="AudioStream" uid="uid://dts0585upmqm8" path="res://Resources/Sounds/Ein_kleines_Vorspiel.mp3" id="68_ln1su"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vcx6v"]
 resource_name = "Innen"
@@ -4513,9 +4515,6 @@ transform = Transform3D(-0.912984, 0, 0.407996, 0, 1, 0, -0.407996, 0, -0.912984
 [node name="Monitor2" parent="." instance=ExtResource("16_82px7")]
 transform = Transform3D(-0.885191, 0, -0.465228, 0, 1, 0, 0.465228, 0, -0.885191, -7.2954, 0.606678, -9.38721)
 
-[node name="TempEnde" parent="." instance=ExtResource("18_r4o85")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.6064, 0.479633, -2.81725)
-
 [node name="Tisch5" parent="." instance=ExtResource("14_68s34")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -28.0666, 0.000500917, -9.7988)
 
@@ -5971,6 +5970,14 @@ collision_layer = 8
 [node name="CollisionShape3D" parent="AudioArea3D" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5793, 1.69937, -2.51584)
 shape = SubResource("BoxShape3D_80gyu")
+
+[node name="Cartridge" parent="." instance=ExtResource("67_64d4t")]
+transform = Transform3D(-1, 0, -8.74228e-08, -8.74228e-08, -2.98023e-08, 1, -1.77636e-14, 1, 2.98023e-08, -29.2443, 0.963815, 7.59302)
+metadata/audioData = ExtResource("68_ln1su")
+
+[node name="Cartridge2" parent="." instance=ExtResource("67_64d4t")]
+transform = Transform3D(1, 0, 0, 0, -0.370639, 0.928777, 0, -0.928777, -0.370639, -9.79287, 0.159056, 4.26539)
+metadata/audioData = ExtResource("68_a3emr")
 
 [editable path="TürMitSchloss"]
 [editable path="TürMitSchloss/Activation Module"]

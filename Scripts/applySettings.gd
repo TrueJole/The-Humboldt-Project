@@ -31,7 +31,7 @@ func _ready() -> void:
 	get_viewport().positional_shadow_atlas_size = 2**(Root.Settings.shadowPower-2)
 	RenderingServer.gi_set_use_half_resolution(false)
 	RenderingServer.voxel_gi_set_quality(RenderingServer.VOXEL_GI_QUALITY_LOW)
-	bakedVoxelGI.subdiv = bakedVoxelGI.SUBDIV_64
+	bakedVoxelGI.subdiv = bakedVoxelGI.SUBDIV_128
 	match Root.Settings.giQuality:
 		0:
 			bakedVoxelGI.visible = false
@@ -41,10 +41,10 @@ func _ready() -> void:
 			RenderingServer.gi_set_use_half_resolution(true)
 		2:
 			bakedVoxelGI.visible = true
-			bakedVoxelGI.subdiv = bakedVoxelGI.SUBDIV_128
+			bakedVoxelGI.subdiv = bakedVoxelGI.SUBDIV_256
 		3:
 			bakedVoxelGI.visible = true
-			bakedVoxelGI.subdiv = bakedVoxelGI.SUBDIV_256
+			bakedVoxelGI.subdiv = bakedVoxelGI.SUBDIV_512
 			RenderingServer.voxel_gi_set_quality(RenderingServer.VOXEL_GI_QUALITY_HIGH)
 	
 	get_tree().root.scaling_3d_scale = Root.Settings.scale3D

@@ -1,8 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://dts1pgqy8xlwp"]
+[gd_scene load_steps=13 format=3 uid="uid://dts1pgqy8xlwp"]
 
 [ext_resource type="PackedScene" uid="uid://blhn8kdvd52vw" path="res://Assets/tv.glb" id="1_b1gju"]
 [ext_resource type="Script" path="res://Scripts/Activation_Module.gd" id="2_r6amd"]
 [ext_resource type="Script" path="res://Scripts/TV.gd" id="2_rhws3"]
+[ext_resource type="AudioStream" uid="uid://fbur487u5tb6" path="res://Resources/Sounds/windowRain.wav" id="4_0ekb1"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ivi8y"]
 albedo_color = Color(0.188235, 0.188235, 0.188235, 1)
@@ -12,9 +13,8 @@ viewport_path = NodePath("MeshInstance3D/SubViewport")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6o42o"]
 resource_local_to_scene = true
+shading_mode = 0
 albedo_texture = SubResource("ViewportTexture_7h2i8")
-roughness = 0.0
-emission_enabled = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4x5h6"]
 albedo_color = Color(0.470588, 0.470588, 0.470588, 1)
@@ -28,7 +28,7 @@ size = Vector3(0.342651, 0.119186, 0.469238)
 size = Vector3(0.27832, 0.366455, 0.442383)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_btqjp"]
-size = Vector3(0.0671567, 0.0505384, 0.173759)
+size = Vector3(0.188691, 0.0970465, 0.0506419)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_l33ks"]
 
@@ -52,16 +52,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00665283, 0.301746, -0.004
 shape = SubResource("BoxShape3D_nfpl1")
 
 [node name="Activation Module" type="Area3D" parent="." index="2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.174749, 0.0581986, 0.105811)
+transform = Transform3D(-5.73206e-15, 1, -1.31134e-07, 4.37114e-08, 1.31134e-07, 1, 1, 0, -4.37114e-08, 0.178454, 0.0581986, 0.105811)
 collision_layer = 0
 collision_mask = 2
 input_ray_pickable = false
 monitorable = false
 script = ExtResource("2_r6amd")
-activators = Array[String](["videocart"])
+activators = Array[String](["videocart", "cart"])
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Activation Module" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0291229, 0.0075541, -0.0037498)
+transform = Transform3D(-1, 3.82137e-15, 0, -3.82137e-15, -1, 8.74228e-08, 0, 8.74228e-08, 1, -0.0113531, -0.0157, 0.00125444)
 shape = SubResource("BoxShape3D_btqjp")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." index="3"]
@@ -82,5 +82,10 @@ offset_right = 40.0
 offset_bottom = 40.0
 autoplay = true
 loop = true
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." index="4"]
+stream = ExtResource("4_0ekb1")
+unit_size = 8.0
+area_mask = 0
 
 [connection signal="activated" from="Activation Module" to="Activation Module" method="_on_activated"]

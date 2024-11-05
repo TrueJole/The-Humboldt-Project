@@ -5,8 +5,8 @@
 [ext_resource type="Material" uid="uid://brlqxy2qq0fet" path="res://Assets/Materials/RedLightOn.tres" id="3_sbmxx"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_im3bq"]
-height = 0.0509013
-radius = 0.241334
+height = 0.0996397
+radius = 0.257853
 
 [node name="LaserReceiver" instance=ExtResource("1_28xof")]
 
