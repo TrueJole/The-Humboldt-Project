@@ -1,7 +1,7 @@
 extends CanvasLayer
 @onready var center_container: CenterContainer = $Control/CenterContainer
 @onready var options_menu: Control# = $Control/OptionsMenu
-var OPTIONS_MENU: PackedScene = preload("res://Szenen/OptionsMenu.tscn")
+var OPTIONS_MENU: PackedScene = preload("res://Szenen/OptionsMenu.scn")
 
 func _physics_process(_delta: float) -> void:
 	if Input.is_action_just_pressed('pauseMenu'):
