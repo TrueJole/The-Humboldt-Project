@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=3 uid="uid://ccdcruw7mockq"]
 
 [ext_resource type="Theme" uid="uid://dj3kv5o4ggit" path="res://Resources/MenuTheme.res" id="1_emt5w"]
-[ext_resource type="Texture2D" uid="uid://le45t6vap2xc" path="res://Assets/Materials/Textures/icon.svg" id="1_k0fv6"]
 [ext_resource type="Script" path="res://Scripts/MainMenu.gd" id="1_na64g"]
 [ext_resource type="PackedScene" uid="uid://dxmbco184lrq1" path="res://Szenen/OptionsMenu.scn" id="3_54e1v"]
+[ext_resource type="PackedScene" uid="uid://c6ntwlwx4jdrt" path="res://Szenen/Credits.tscn" id="4_cjtrt"]
 [ext_resource type="Texture2D" uid="uid://cuucbbs2ribtd" path="res://Assets/Materials/Textures/twirl_01.png" id="5_18okb"]
 [ext_resource type="Script" path="res://Scripts/rotate.gd" id="6_fikis"]
 
@@ -26,17 +26,9 @@ script = ExtResource("1_na64g")
 visible = false
 layout_mode = 1
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="Credits" parent="." instance=ExtResource("4_cjtrt")]
 visible = false
-layout_mode = 2
-offset_left = 896.0
-offset_top = 482.0
-offset_right = 1024.0
-offset_bottom = 610.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_vertical = 0
-texture = ExtResource("1_k0fv6")
+layout_mode = 1
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
 layout_mode = 1
@@ -77,6 +69,12 @@ theme_override_font_sizes/font_size = 50
 text = "Optionen"
 metadata/_edit_use_anchors_ = true
 
+[node name="CreditsButton" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Credits"
+metadata/_edit_use_anchors_ = true
+
 [node name="ExitButton" type="Button" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
@@ -111,4 +109,5 @@ metadata/_edit_use_anchors_ = true
 [connection signal="done" from="OptionsMenu" to="." method="_on_options_menu_done"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/CreditsButton" to="." method="_on_options_button_2_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]

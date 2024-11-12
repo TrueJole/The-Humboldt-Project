@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://io2aeiisytsn"]
+[gd_scene load_steps=14 format=3 uid="uid://io2aeiisytsn"]
 
 [ext_resource type="PackedScene" uid="uid://cbelwvr0dasdd" path="res://Assets/Output.glb" id="1_gsswc"]
 [ext_resource type="Material" uid="uid://bj118p6up2n7j" path="res://Assets/Materials/Metall_Glatt.tres" id="2_m3gtj"]
@@ -14,8 +14,11 @@ size = Vector3(0.283371, 0.0913696, 0.412262)
 [sub_resource type="BoxShape3D" id="BoxShape3D_1l55g"]
 size = Vector3(0.283371, 0.149323, 0.412262)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_el0bc"]
-size = Vector3(0.283371, 0.415482, 0.120193)
+[sub_resource type="BoxShape3D" id="BoxShape3D_kl3gp"]
+size = Vector3(0.283371, 0.415482, 0.103046)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_j7uly"]
+size = Vector3(0.283371, 0.415482, 0.0970649)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0lu7j"]
 size = Vector3(0.340904, 0.0131168, 0.120193)
@@ -41,7 +44,7 @@ surface_material_override/4 = ExtResource("3_va0x3")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.237254, 0.232779, 0.0352695)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." index="2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.163918, 0.0445862, 0.043045)
+transform = Transform3D(0.999627, 0.0273285, 0, -0.0273285, 0.999627, 0, 0, 0, 1, 0.163918, 0.0445862, 0.043045)
 shape = SubResource("BoxShape3D_n2on5")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="." index="3"]
@@ -49,12 +52,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.163918, 0.388439, 0.043045)
 shape = SubResource("BoxShape3D_1l55g")
 
 [node name="CollisionShape3D3" type="CollisionShape3D" parent="." index="4"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.163918, 0.25536, 0.189079)
-shape = SubResource("BoxShape3D_el0bc")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.163918, 0.25536, 0.19663)
+shape = SubResource("BoxShape3D_kl3gp")
 
 [node name="CollisionShape3D4" type="CollisionShape3D" parent="." index="5"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.163918, 0.25536, -0.104117)
-shape = SubResource("BoxShape3D_el0bc")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.163918, 0.25536, -0.116311)
+shape = SubResource("BoxShape3D_j7uly")
 
 [node name="CollisionShape3D6" type="CollisionShape3D" parent="." index="6"]
 transform = Transform3D(0.842076, 0.539359, 0, -0.539359, 0.842076, 0, 0, 0, 1, 0.22684, 0.135179, 0.0417306)

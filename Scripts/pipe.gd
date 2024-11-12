@@ -8,7 +8,8 @@ func _on_activation_module_activated(_body: Node3D) -> void:
 	#print('received')
 	if not activated:
 		animation_player.play('Open')
-		changed.emit()
 		activated = true
+		changed.emit()
+		
 	
 	

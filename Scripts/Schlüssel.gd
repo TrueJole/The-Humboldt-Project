@@ -1,4 +1,5 @@
 extends RigidBody3D
+class_name Key
 @onready var animationPlayer: AnimationPlayer = $AnimationPlayer
 var used: bool
 

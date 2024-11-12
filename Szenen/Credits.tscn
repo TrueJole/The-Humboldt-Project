@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=3 uid="uid://c6ntwlwx4jdrt"]
+
+[ext_resource type="Script" path="res://Szenen/credits.gd" id="1_xyflo"]
+[ext_resource type="Texture2D" uid="uid://cgtdehin0mo3m" path="res://Assets/Materials/Textures/Credits.png" id="2_wlsup"]
+
+[node name="Credits" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xyflo")
+
+[node name="Credits" type="Sprite2D" parent="."]
+position = Vector2(968, 775)
+scale = Vector2(0.743652, 0.743652)
+texture = ExtResource("2_wlsup")
+
+[node name="BackButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -262.0
+offset_top = -114.0
+offset_right = -33.0
+offset_bottom = -34.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 60
+text = "Zurück"
+
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]

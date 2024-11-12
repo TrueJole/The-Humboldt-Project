@@ -1,18 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://bv8b67855mwjt"]
+[gd_scene load_steps=4 format=3 uid="uid://bv8b67855mwjt"]
 
 [ext_resource type="PackedScene" uid="uid://guqf1smfukxq" path="res://Assets/Pin Board.glb" id="1_6gknl"]
-[ext_resource type="Material" uid="uid://bj118p6up2n7j" path="res://Assets/Materials/Metall_Glatt.tres" id="2_1apu3"]
-[ext_resource type="Material" uid="uid://bvbuv05k6fwtc" path="res://Assets/Materials/UhrenSchwarz.tres" id="3_h52u3"]
-[ext_resource type="Material" uid="uid://ch1drv0vxjee4" path="res://Assets/Materials/Holz.tres" id="4_yiu8a"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_r0k2s"]
+size = Vector3(0.0332642, 1.08423, 1.41846)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_yd1m6"]
 size = Vector3(0.0583496, 0.535645, 1.4278)
 
 [node name="Pin Board" instance=ExtResource("1_6gknl")]
-
-[node name="Cylinder" parent="." index="0"]
-surface_material_override/0 = ExtResource("2_1apu3")
-surface_material_override/1 = ExtResource("3_h52u3")
 
 [node name="Cube" parent="." index="1"]
 collision_layer = 0
@@ -20,11 +16,14 @@ collision_mask = 6
 mass = 5.0
 angular_damp = 1.0
 
-[node name="Cube" parent="Cube" index="0"]
-surface_material_override/0 = ExtResource("4_yiu8a")
-
 [node name="CollisionShape3D" parent="Cube" index="1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.67682e-05, 0.00758362, -0.00657654)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000249874, 0.00209045, 1.52588e-05)
+visible = false
+disabled = true
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Cube" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000823978, 0.00427246, -0.000732422)
+shape = SubResource("BoxShape3D_r0k2s")
 
 [node name="RigidBody3D" type="RigidBody3D" parent="." index="2"]
 collision_layer = 2

@@ -14,8 +14,9 @@ func _ready() -> void:
 	pipe.connect("changed", pipechanged)
 	glassball.activated = false
 	water.hide()
+	$"../Wasser/Area3D/CollisionShape3D".disabled = true
 	changed()
-	pipechanged()
+	#pipechanged()
 
 func pipechanged() -> void:
 	#if pipe.activated:

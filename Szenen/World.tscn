@@ -418,6 +418,9 @@ shape = SubResource("CapsuleShape3D_a570a")
 [node name="CollisionShape3DSneak" parent="Player" index="2"]
 shape = SubResource("CapsuleShape3D_4bphk")
 
+[node name="AudioStreamPlayer3D" parent="Player" index="3"]
+stream = null
+
 [node name="MeshInstance3D" parent="Player" index="4"]
 mesh = SubResource("CapsuleMesh_ud774")
 

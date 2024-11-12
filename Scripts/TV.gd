@@ -34,7 +34,7 @@ func _physics_process(_delta: float) -> void:
 		video_stream_player.stop()
 		audio_stream_player_3d.stream = null
 		audio_stream_player_3d.playing = false
-		print('removed')
+		#print('removed')
 		loaded = null
 		pass
 		#projector.light_projector = null

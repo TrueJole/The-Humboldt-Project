@@ -4569,7 +4569,7 @@ stream = ExtResource("24_801o6")
 unit_size = 5.0
 
 [node name="LaserReceiver3" parent="." instance=ExtResource("21_msvfi")]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 12.0803, 3.28473, -10)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 12.0803, 2.99944, -10)
 
 [node name="TürMitSchloss" parent="." instance=ExtResource("25_isr6i")]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -9, 0, -4)

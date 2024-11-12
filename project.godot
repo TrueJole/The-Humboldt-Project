@@ -193,9 +193,10 @@ joyRight={
 
 3d/physics_engine="JoltPhysics3D"
 3d/default_gravity=9.81
+3d/solver/contact_max_allowed_penetration=0.001
 jolt_3d/solver/position_iterations=16
 jolt_3d/solver/contact_speculative_distance=0.01
-jolt_3d/solver/contact_allowed_penetration=0.01
+jolt_3d/solver/contact_allowed_penetration=0.001
 
 [rendering]
 

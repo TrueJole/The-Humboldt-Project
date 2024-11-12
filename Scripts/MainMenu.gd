@@ -47,6 +47,7 @@ func _process(_delta: float) -> void:
 func _on_start_button_pressed() -> void:
 	if not loading:
 		$Swirl.show()
+		$CenterContainer.hide()
 		loading = true
 		get_node('OptionsMenu').queue_free()
 		loadingBar.show()
@@ -71,3 +72,11 @@ func _on_options_menu_done() -> void:
 		get_node('OptionsMenu').hide()
 		var file: FileAccess = FileAccess.open('user://settings.dat', FileAccess.WRITE)
 		file.store_var(Root.Settings, true) 
+
+
+func _on_options_button_2_pressed() -> void:
+	$Credits.show()
+	$CenterContainer.hide()
+	await $Credits.done
+	$CenterContainer.show()
+	

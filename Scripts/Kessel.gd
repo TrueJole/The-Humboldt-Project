@@ -57,7 +57,7 @@ func _on_activation_module_activated(body: Node3D) -> void:
 		setColor(colors[item_ids.find(body.get_meta('itemid'))])
 		fulfilled[item_ids.find(body.get_meta('itemid'))] = true
 		body.queue_free()
-	elif not done and filled:
+	elif not done and filled and not body is Key:
 		print_debug('Failed ', body)
 		failed = true
 		setColor(failedColor)

@@ -34,9 +34,7 @@ func _physics_process(_delta: float) -> void:
 		if heldObject.has_method('used'):
 			heldObject.used()
 	
-	if Input.is_action_pressed("hold"):
-		holding = true
-		
+	if Input.is_action_just_pressed("hold"):
 		if hand.is_colliding() and (hand.get_collider() is Area3D) and (heldObject == null) and hand.get_collider().get_collision_layer_value(2) == true:
 			
 			var selectedObject: Area3D = hand.get_collider()
@@ -44,7 +42,9 @@ func _physics_process(_delta: float) -> void:
 			if selectedObject.has_method('on_interacted'):
 				#print_debug(selectedObject)
 				selectedObject.on_interacted()
-		
+				
+	if Input.is_action_pressed("hold"):
+		holding = true
 		
 		if hand.is_colliding() and (hand.get_collider() is RigidBody3D) and (heldObject == null) and hand.get_collider().get_collision_layer_value(2) == true:
 			

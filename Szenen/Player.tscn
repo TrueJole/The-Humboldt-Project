@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://dy4ptaa6dtvyu"]
+[gd_scene load_steps=19 format=3 uid="uid://dy4ptaa6dtvyu"]
 
 [ext_resource type="Script" path="res://Scripts/CharacterController.gd" id="1_c8kcr"]
 [ext_resource type="CameraAttributesPractical" uid="uid://cfllxe7h4a6lo" path="res://Resources/CameraAttributes.tres" id="2_ijyeg"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" path="res://Scripts/flicker.gd" id="4_g71aj"]
 [ext_resource type="Shader" path="res://Scripts/vignette.gdshader" id="6_6q5m7"]
 [ext_resource type="Material" uid="uid://ddcmnt44ha8gd" path="res://Scripts/WaterShader.tres" id="7_vpvg2"]
+[ext_resource type="AudioStream" uid="uid://csgfkpnqkkqla" path="res://Resources/Sounds/RandomStep.tres" id="8_q5ihs"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_pqy3d"]
 shader = ExtResource("6_6q5m7")
@@ -240,10 +241,9 @@ disabled = true
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, -0.379436, 0)
-volume_db = -5.0
-unit_size = 3.0
+stream = ExtResource("8_q5ihs")
+max_db = 6.0
 pitch_scale = 1.1
-max_distance = 5.0
 bus = &"Räume"
 area_mask = 8
 

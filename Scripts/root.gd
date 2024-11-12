@@ -15,15 +15,15 @@ func on_scene_loaded() -> void:
 
 func default_settings() -> void:
 	print('applied default settings')
-	Settings.soundlevel = 80
+	Settings.soundlevel = 100
 	Settings.ssao = true
 	Settings.volumetricFog = true
 	Settings.ssr = false
 	Settings.ssil = false
-	Settings.giQuality = 1
+	Settings.giQuality = 2
 	Settings.msaa = false
 	Settings.exposure = 1
-	Settings.shadowPower = 9
+	Settings.shadowPower = 10
 	Settings.showFPS = false
 	Settings.fullscreen = true
 	Settings.fpsMode = 1

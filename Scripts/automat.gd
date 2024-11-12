@@ -17,7 +17,7 @@ func _process(_delta: float) -> void:
 
 
 func _on_interactive_component_pressed() -> void:
-	if coins > 0:
+	if coins > 0 and not entering:
 		get_tree().paused = true
 		#item_list.show()
 		$Control.show()
@@ -27,7 +27,7 @@ func _on_interactive_component_pressed() -> void:
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		if not get_tree().paused:
 			input = ""
-		#entering = true
+		entering = true
 		#set_process(false)
 
 
