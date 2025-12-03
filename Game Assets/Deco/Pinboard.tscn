@@ -46,19 +46,16 @@ gravity_scale = 0.0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00134277, 0.936543, -0.000166174)
 shape = SubResource("BoxShape3D_yd1m6")
 
-[node name="JoltGeneric6DOFJoint3D" type="JoltGeneric6DOFJoint3D" parent="." index="4"]
+[node name="Generic6DOFJoint3D" type="Generic6DOFJoint3D" parent="." index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.956108, 0)
 node_a = NodePath("../Cube")
 node_b = NodePath("../RigidBody3D")
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.956108, 0)
 
-[node name="JoltGeneric6DOFJoint3D2" type="JoltGeneric6DOFJoint3D" parent="." index="5"]
+[node name="Generic6DOFJoint3D2" type="Generic6DOFJoint3D" parent="." index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.41002, 0)
 node_a = NodePath("../Cube")
 node_b = NodePath("../RigidBody3D2")
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.41002, 0)
 
-[node name="HingeJoint3D" type="JoltHingeJoint3D" parent="." index="6"]
-limit_spring_enabled = true
-limit_spring_frequency = 10.0
-limit_spring_damping = 5.0
-node_b = NodePath("../Cube")
+[node name="HingeJoint3D" type="HingeJoint3D" parent="." index="6"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.21071, -0.723965)
+node_b = NodePath("../Cube")

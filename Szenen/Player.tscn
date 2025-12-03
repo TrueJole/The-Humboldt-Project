@@ -1,13 +1,20 @@
-[gd_scene load_steps=19 format=3 uid="uid://dy4ptaa6dtvyu"]
+[gd_scene load_steps=21 format=3 uid="uid://dy4ptaa6dtvyu"]
 
-[ext_resource type="Script" path="res://Scripts/CharacterController.gd" id="1_c8kcr"]
-[ext_resource type="CameraAttributesPractical" uid="uid://cfllxe7h4a6lo" path="res://Resources/CameraAttributes.tres" id="2_ijyeg"]
-[ext_resource type="Script" path="res://Scripts/Hand.gd" id="3_g3gao"]
+[ext_resource type="Script" uid="uid://748fjoca3cbl" path="res://Scripts/CharacterController.gd" id="1_c8kcr"]
+[ext_resource type="Script" uid="uid://cf31kubhi4y54" path="res://Scripts/Hand.gd" id="3_g3gao"]
+[ext_resource type="Shader" uid="uid://d4ar7jph74a5c" path="res://Szenen/fog.gdshader" id="3_mpr15"]
 [ext_resource type="Texture2D" uid="uid://bcauowill6bhy" path="res://Assets/Materials/Textures/Cursor_Punkt.png" id="4_8u4cr"]
-[ext_resource type="Script" path="res://Scripts/flicker.gd" id="4_g71aj"]
-[ext_resource type="Shader" path="res://Scripts/vignette.gdshader" id="6_6q5m7"]
+[ext_resource type="Script" uid="uid://bj1jdq7nm7l6i" path="res://Scripts/flicker.gd" id="4_g71aj"]
+[ext_resource type="Shader" uid="uid://c6h5xt58tv8t7" path="res://Scripts/vignette.gdshader" id="6_6q5m7"]
 [ext_resource type="Material" uid="uid://ddcmnt44ha8gd" path="res://Scripts/WaterShader.tres" id="7_vpvg2"]
 [ext_resource type="AudioStream" uid="uid://csgfkpnqkkqla" path="res://Resources/Sounds/RandomStep.tres" id="8_q5ihs"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_78new"]
+render_priority = 0
+shader = ExtResource("3_mpr15")
+
+[sub_resource type="QuadMesh" id="QuadMesh_y4n7y"]
+size = Vector2(2, 2)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_pqy3d"]
 shader = ExtResource("6_6q5m7")
@@ -96,8 +103,8 @@ tracks/2/keys = PackedFloat32Array(0, 1, 0, 1.43804, 0, 0.5, 1, 0, 0.454237, 0)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_epkto"]
 _data = {
-"RESET": SubResource("Animation_6uapy"),
-"Sneak": SubResource("Animation_hunwj")
+&"RESET": SubResource("Animation_6uapy"),
+&"Sneak": SubResource("Animation_hunwj")
 }
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_8de6o"]
@@ -137,11 +144,19 @@ unique_name_in_owner = true
 process_mode = 3
 transform = Transform3D(-1.43833, 1.25743e-07, 0, 1.25743e-07, 1.43833, 1.25743e-07, 0, 1.25743e-07, -1.43833, 0, 0.2, -0.219)
 rotation_order = 0
-attributes = ExtResource("2_ijyeg")
 current = true
 fov = 60.0
 far = 15.0
 script = ExtResource("3_g3gao")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Head/Camera3D"]
+transform = Transform3D(1, 5.373272e-16, 0, 5.3732806e-16, 1, 0, 0, 0, 1, 0, 0, 0)
+layers = 512
+material_override = SubResource("ShaderMaterial_78new")
+cast_shadow = 0
+extra_cull_margin = 16384.0
+ignore_occlusion_culling = true
+mesh = SubResource("QuadMesh_y4n7y")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Head/Camera3D"]
 transform = Transform3D(1, 5.37327e-16, 7.10543e-15, 5.37328e-16, 1, -7.10543e-15, 0, 0, 1, 1.42109e-14, 0, -0.0397869)
@@ -150,6 +165,7 @@ light_energy = 0.3
 light_indirect_energy = 0.0
 light_volumetric_fog_energy = 0.0
 light_bake_mode = 0
+light_cull_mask = 4294966783
 shadow_opacity = 0.0
 shadow_blur = 0.0
 spot_range = 20.0
@@ -255,7 +271,7 @@ mesh = SubResource("CapsuleMesh_ud774")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_epkto")
+&"": SubResource("AnimationLibrary_epkto")
 }
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]

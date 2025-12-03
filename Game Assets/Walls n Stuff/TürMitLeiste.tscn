@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://cnlt4qi4t3cpr"]
 
 [ext_resource type="PackedScene" uid="uid://ox2a78su6wes" path="res://Assets/TürrahmenMitLeiste1_3.glb" id="1_a1dmm"]
-[ext_resource type="Script" path="res://Scripts/Tür.gd" id="2_0q2dv"]
+[ext_resource type="Script" uid="uid://b57xa7jqppei" path="res://Scripts/Tür.gd" id="2_0q2dv"]
 [ext_resource type="Material" uid="uid://bk3fedv3l0f2d" path="res://Assets/Materials/WandBeige.tres" id="3_m25vv"]
 [ext_resource type="PackedScene" uid="uid://bg2gy4st6tkbd" path="res://Szenen/Tür.tscn" id="3_xtmaj"]
 [ext_resource type="AudioStream" uid="uid://byw2yxcu7kuju" path="res://Resources/Sounds/DoorClosingRandom.tres" id="7_3gejw"]
@@ -39,13 +39,10 @@ shape = SubResource("BoxShape3D_cjpdy")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0493126, 0, 0.035)
 metadata/door = true
 
-[node name="JoltHingeJoint3D" type="JoltHingeJoint3D" parent="." index="3"]
-limit_enabled = true
-limit_upper = 1.5708
-limit_lower = -1.5708
+[node name="HingeJoint3D" type="HingeJoint3D" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.0480436, 0.0210888, 0.004948)
 node_a = NodePath("../StaticBody3D")
 node_b = NodePath("../Tür")
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.0480436, 0.0210888, 0.004948)
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." index="4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.408491, 0.935784, 0)

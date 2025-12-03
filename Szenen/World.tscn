@@ -1,7 +1,7 @@
 [gd_scene load_steps=34 format=3 uid="uid://did6uqnw114lc"]
 
-[ext_resource type="Script" path="res://Scripts/applySettings.gd" id="1_c6mct"]
-[ext_resource type="Script" path="res://Tools/ShowOnStart.gd" id="2_ahk6u"]
+[ext_resource type="Script" uid="uid://cw3byaehv6k65" path="res://Scripts/applySettings.gd" id="1_c6mct"]
+[ext_resource type="Script" uid="uid://dnpamyfidby8e" path="res://Tools/ShowOnStart.gd" id="2_ahk6u"]
 [ext_resource type="PackedScene" uid="uid://8vnrtoab323g" path="res://Szenen/Moonlight.tscn" id="2_av35f"]
 [ext_resource type="Material" uid="uid://bcl348u51riw2" path="res://Resources/fog.tres" id="3_es8gc"]
 [ext_resource type="VoxelGIData" uid="uid://biuhfmotqdp8t" path="res://Resources/worldVoxelGI.res" id="4_s06mn"]
@@ -16,7 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://b3k65sjuw8040" path="res://Game Assets/Walls n Stuff/WandInnenEinfarbig.tscn" id="14_fexee"]
 [ext_resource type="PackedScene" uid="uid://cf6we7nmx02og" path="res://Game Assets/Walls n Stuff/WandAußenNeu.tscn" id="15_3itrc"]
 [ext_resource type="PackedScene" uid="uid://eabibpd22klb" path="res://Game Assets/Walls n Stuff/DoppelTürOhneLeiste.tscn" id="16_6whm2"]
-[ext_resource type="Shader" path="res://Scripts/vignette.gdshader" id="17_fqbt3"]
+[ext_resource type="Shader" uid="uid://c6h5xt58tv8t7" path="res://Scripts/vignette.gdshader" id="17_fqbt3"]
 [ext_resource type="PackedScene" uid="uid://c613lq67yfqfc" path="res://Game Assets/Walls n Stuff/VersperrteDoppelTür.tscn" id="17_hwmqp"]
 [ext_resource type="AudioStream" uid="uid://drb6obed6hyfo" path="res://Resources/Sounds/DoorClosingLong1.wav" id="19_q33vt"]
 
@@ -107,8 +107,8 @@ tracks/2/keys = PackedFloat32Array(0, 1, 0, 1.43804, 0, 0.5, 1, 0, 0.454237, 0)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_epkto"]
 _data = {
-"RESET": SubResource("Animation_6uapy"),
-"Sneak": SubResource("Animation_hunwj")
+&"RESET": SubResource("Animation_6uapy"),
+&"Sneak": SubResource("Animation_hunwj")
 }
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_8de6o"]
@@ -331,8 +331,8 @@ tracks/7/use_blend = true
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_0e1ny"]
 _data = {
-"RESET": SubResource("Animation_d2pcy"),
-"intro": SubResource("Animation_lxr04")
+&"RESET": SubResource("Animation_d2pcy"),
+&"intro": SubResource("Animation_lxr04")
 }
 
 [node name="World" type="Node3D"]
@@ -407,7 +407,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 10.5, 4)
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 1, 2.2, 10)
 
 [node name="Camera3D" parent="Player/Head" index="1"]
-transform = Transform3D(-1.43833, 3.64643e-06, 0, 3.64643e-06, 1.43833, 3.64643e-06, 9.24436e-12, 3.64643e-06, -1.43833, 0, 0.2, -0.219)
+transform = Transform3D(-1.43833, 3.646428e-06, 0, 3.646428e-06, 1.43833, 3.646428e-06, 9.244358e-12, 3.646428e-06, -1.43833, 0, 0.2, -0.219)
 
 [node name="VignetteOverlay" parent="Player/Head/Camera3D" index="4"]
 material = SubResource("ShaderMaterial_pqy3d")
@@ -426,7 +426,7 @@ mesh = SubResource("CapsuleMesh_ud774")
 
 [node name="AnimationPlayer" parent="Player" index="5"]
 libraries = {
-"": SubResource("AnimationLibrary_epkto")
+&"": SubResource("AnimationLibrary_epkto")
 }
 
 [node name="MeshInstance3D2" parent="Player" index="6"]
@@ -483,7 +483,7 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1, 1.7
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.75, 5)
 
 [node name="Tür2" parent="Preview/TürOhneLeiste" index="4"]
-transform = Transform3D(-1, 0, -2.53518e-06, 0, 1, 0, 2.53518e-06, 0, -1, 0.901465, 0, -0.0284647)
+transform = Transform3D(-1, 0, -2.5351817e-06, 0, 1, 0, 2.5351817e-06, 0, -1, 0.901465, 0, -0.0284647)
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Preview/TürOhneLeiste"]
 bus = &"Räume"
@@ -494,7 +494,7 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 1.7
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_0e1ny")
+&"": SubResource("AnimationLibrary_0e1ny")
 }
 
 [editable path="Player"]

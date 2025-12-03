@@ -15,9 +15,12 @@ dest_files=["res://.godot/imported/cloth.glb-3cbfb33b4741fa3f39948bd7d0982f33.sc
 
 nodes/root_type="Node3D"
 nodes/root_name=""
+nodes/root_script=null
 nodes/apply_root_scale=true
 nodes/root_scale=1.0
 nodes/import_as_skeleton_bones=false
+nodes/use_name_suffixes=true
+nodes/use_node_type_suffixes=true
 meshes/ensure_tangents=true
 meshes/generate_lods=true
 meshes/create_shadow_meshes=true
@@ -31,6 +34,9 @@ animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
+materials/extract=0
+materials/extract_format=0
+materials/extract_path=""
 _subresources={
 "meshes": {
 "cloth_Plane": {
@@ -40,7 +46,8 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
-"save_to_file/path": "res://Resources/cloth.res"
+"save_to_file/fallback_path": "res://Resources/cloth.res",
+"save_to_file/path": "uid://d3tkko2g6hvma"
 }
 }
 }

@@ -12,7 +12,7 @@ config_version=5
 
 config/name="The Humboldt Project"
 run/main_scene="res://Szenen/root.tscn"
-config/features=PackedStringArray("4.3", "Forward Plus")
+config/features=PackedStringArray("4.5", "Forward Plus")
 
 [autoload]
 
@@ -23,7 +23,8 @@ GlobalDebug="*res://Scripts/global_debug.gd"
 
 gdscript/warnings/untyped_declaration=2
 gdscript/warnings/inferred_declaration=2
-shapes/navigation/geometry_edge_disabled_color=Color(0.501961, 0.501961, 0.501961, 1)
+shapes/navigation/3d/geometry_edge_disabled_color=Color(0.501961, 0.501961, 0.501961, 1)
+shapes/navigation/2d/geometry_edge_disabled_color=Color(0.501961, 0.501961, 0.501961, 1)
 
 [debug_draw_3d]
 
@@ -191,7 +192,7 @@ joyRight={
 
 [physics]
 
-3d/physics_engine="JoltPhysics3D"
+3d/physics_engine="Jolt Physics"
 3d/default_gravity=9.81
 3d/solver/contact_max_allowed_penetration=0.001
 jolt_3d/solver/position_iterations=16
@@ -215,7 +216,4 @@ environment/volumetric_fog/volume_size=16
 environment/volumetric_fog/volume_depth=16
 environment/defaults/default_clear_color=Color(0.109804, 0.109804, 0.109804, 1)
 anti_aliasing/quality/use_debanding=true
-
-[xr]
-
-openxr/extensions/hand_tracking=false
+occlusion_culling/use_occlusion_culling=true

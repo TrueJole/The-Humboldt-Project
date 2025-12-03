@@ -1,12 +1,12 @@
 [gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://p5vaohu5mm5c"]
 
-[ext_resource type="Shader" path="res://Scripts/RegenGlas.gdshader" id="1_sqner"]
+[ext_resource type="Shader" uid="uid://cclpo3n2x7rnh" path="res://Scripts/RegenGlas.gdshader" id="1_sqner"]
 
 [sub_resource type="CurveTexture" id="CurveTexture_26rk2"]
 texture_mode = 1
 
 [resource]
 shader = ExtResource("1_sqner")
+shader_parameter/iChannel0 = SubResource("CurveTexture_26rk2")
 shader_parameter/frequency = 0.0
 shader_parameter/size = 0.015
-shader_parameter/iChannel0 = SubResource("CurveTexture_26rk2")
