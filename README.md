@@ -1,2 +1,2 @@
 # Jan Ole's Super Seminararbeit
-Ich bin zu faul, hier noch irgendwas hin zuschreiben
+Dies ist der ```modern``` Branch, eine moderne Version des Spiels. Noch in Entwicklung.
